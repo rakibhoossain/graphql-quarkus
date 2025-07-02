@@ -1,0 +1,1093 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="org.acme.service.BrandServiceTest" time="0.044" tests="16" errors="16" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="23"/>
+    <property name="test.url" value="http://localhost:8081"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="io.quarkus.security.http.test-if-basic-auth-implicitly-required" value="true"/>
+    <property name="java.class.path" value="/Users/rakib/Projects/code-with-quarkus/target/test-classes:/Users/rakib/Projects/code-with-quarkus/target/classes:/Users/rakib/.m2/repository/io/quarkus/quarkus-rest/3.24.1/quarkus-rest-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-rest-common/3.24.1/quarkus-rest-common-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/resteasy/reactive/resteasy-reactive-common/3.24.1/resteasy-reactive-common-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/resteasy/reactive/resteasy-reactive-common-types/3.24.1/resteasy-reactive-common-types-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/resteasy/reactive/resteasy-reactive-vertx/3.24.1/resteasy-reactive-vertx-3.24.1.jar:/Users/rakib/.m2/repository/io/vertx/vertx-web/4.5.16/vertx-web-4.5.16.jar:/Users/rakib/.m2/repository/io/vertx/vertx-bridge-common/4.5.16/vertx-bridge-common-4.5.16.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-core/3.19.1/smallrye-mutiny-vertx-core-3.19.1.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-runtime/3.19.1/smallrye-mutiny-vertx-runtime-3.19.1.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/vertx-mutiny-generator/3.19.1/vertx-mutiny-generator-3.19.1.jar:/Users/rakib/.m2/repository/io/vertx/vertx-codegen/4.5.16/vertx-codegen-4.5.16.jar:/Users/rakib/.m2/repository/io/quarkus/resteasy/reactive/resteasy-reactive/3.24.1/resteasy-reactive-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/vertx/utils/quarkus-vertx-utils/3.24.1/quarkus-vertx-utils-3.24.1.jar:/Users/rakib/.m2/repository/jakarta/annotation/jakarta.annotation-api/3.0.0/jakarta.annotation-api-3.0.0.jar:/Users/rakib/.m2/repository/org/jboss/logging/commons-logging-jboss-logging/1.0.0.Final/commons-logging-jboss-logging-1.0.0.Final.jar:/Users/rakib/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/rakib/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/rakib/.m2/repository/org/jboss/logging/jboss-logging/3.6.1.Final/jboss-logging-3.6.1.Final.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-vertx-http/3.24.1/quarkus-vertx-http-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-credentials/3.24.1/quarkus-credentials-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/common/smallrye-common-vertx-context/2.12.0/smallrye-common-vertx-context-2.12.0.jar:/Users/rakib/.m2/repository/io/smallrye/common/smallrye-common-constraint/2.12.0/smallrye-common-constraint-2.12.0.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-web/3.19.1/smallrye-mutiny-vertx-web-3.19.1.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-web-common/3.19.1/smallrye-mutiny-vertx-web-common-3.19.1.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-auth-common/3.19.1/smallrye-mutiny-vertx-auth-common-3.19.1.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-bridge-common/3.19.1/smallrye-mutiny-vertx-bridge-common-3.19.1.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-uri-template/3.19.1/smallrye-mutiny-vertx-uri-template-3.19.1.jar:/Users/rakib/.m2/repository/io/github/crac/org-crac/0.1.3/org-crac-0.1.3.jar:/Users/rakib/.m2/repository/com/aayushatharva/brotli4j/brotli4j/1.16.0/brotli4j-1.16.0.jar:/Users/rakib/.m2/repository/com/aayushatharva/brotli4j/service/1.16.0/service-1.16.0.jar:/Users/rakib/.m2/repository/com/aayushatharva/brotli4j/native-osx-aarch64/1.16.0/native-osx-aarch64-1.16.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-jsonp/3.24.1/quarkus-jsonp-3.24.1.jar:/Users/rakib/.m2/repository/org/eclipse/parsson/parsson/1.1.7/parsson-1.1.7.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-virtual-threads/3.24.1/quarkus-virtual-threads-3.24.1.jar:/Users/rakib/.m2/repository/io/vertx/vertx-core/4.5.16/vertx-core-4.5.16.jar:/Users/rakib/.m2/repository/io/netty/netty-common/4.1.121.Final/netty-common-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-buffer/4.1.121.Final/netty-buffer-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-transport/4.1.121.Final/netty-transport-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-handler/4.1.121.Final/netty-handler-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.121.Final/netty-transport-native-unix-common-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-handler-proxy/4.1.121.Final/netty-handler-proxy-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-codec-socks/4.1.121.Final/netty-codec-socks-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-codec-http/4.1.121.Final/netty-codec-http-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-codec-http2/4.1.121.Final/netty-codec-http2-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-resolver/4.1.121.Final/netty-resolver-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-resolver-dns/4.1.121.Final/netty-resolver-dns-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-codec-dns/4.1.121.Final/netty-codec-dns-4.1.121.Final.jar:/Users/rakib/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.19.1/jackson-core-2.19.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-rest-jackson/3.24.1/quarkus-rest-jackson-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-rest-jackson-common/3.24.1/quarkus-rest-jackson-common-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/resteasy/reactive/resteasy-reactive-jackson/3.24.1/resteasy-reactive-jackson-3.24.1.jar:/Users/rakib/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.19.1/jackson-databind-2.19.1.jar:/Users/rakib/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.19.1/jackson-annotations-2.19.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-jackson/3.24.1/quarkus-jackson-3.24.1.jar:/Users/rakib/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.19.1/jackson-datatype-jsr310-2.19.1.jar:/Users/rakib/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.19.1/jackson-datatype-jdk8-2.19.1.jar:/Users/rakib/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.19.1/jackson-module-parameter-names-2.19.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-smallrye-graphql-client/3.24.1/quarkus-smallrye-graphql-client-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-core/3.24.1/quarkus-core-3.24.1.jar:/Users/rakib/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/rakib/.m2/repository/io/smallrye/common/smallrye-common-os/2.12.0/smallrye-common-os-2.12.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-ide-launcher/3.24.1/quarkus-ide-launcher-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-development-mode-spi/3.24.1/quarkus-development-mode-spi-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/config/smallrye-config/3.13.2/smallrye-config-3.13.2.jar:/Users/rakib/.m2/repository/io/smallrye/config/smallrye-config-core/3.13.2/smallrye-config-core-3.13.2.jar:/Users/rakib/.m2/repository/io/smallrye/common/smallrye-common-classloader/2.12.0/smallrye-common-classloader-2.12.0.jar:/Users/rakib/.m2/repository/io/smallrye/config/smallrye-config-common/3.13.2/smallrye-config-common-3.13.2.jar:/Users/rakib/.m2/repository/org/jboss/logmanager/jboss-logmanager/3.1.2.Final/jboss-logmanager-3.1.2.Final.jar:/Users/rakib/.m2/repository/io/smallrye/common/smallrye-common-cpu/2.12.0/smallrye-common-cpu-2.12.0.jar:/Users/rakib/.m2/repository/io/smallrye/common/smallrye-common-expression/2.12.0/smallrye-common-expression-2.12.0.jar:/Users/rakib/.m2/repository/io/smallrye/common/smallrye-common-net/2.12.0/smallrye-common-net-2.12.0.jar:/Users/rakib/.m2/repository/io/smallrye/common/smallrye-common-ref/2.12.0/smallrye-common-ref-2.12.0.jar:/Users/rakib/.m2/repository/org/jboss/threads/jboss-threads/3.9.1/jboss-threads-3.9.1.jar:/Users/rakib/.m2/repository/io/smallrye/common/smallrye-common-function/2.12.0/smallrye-common-function-2.12.0.jar:/Users/rakib/.m2/repository/org/slf4j/slf4j-api/2.0.6/slf4j-api-2.0.6.jar:/Users/rakib/.m2/repository/org/jboss/slf4j/slf4j-jboss-logmanager/2.0.0.Final/slf4j-jboss-logmanager-2.0.0.Final.jar:/Users/rakib/.m2/repository/org/wildfly/common/wildfly-common/2.0.1/wildfly-common-2.0.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-bootstrap-runner/3.24.1/quarkus-bootstrap-runner-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-fs-util/1.0.0/quarkus-fs-util-1.0.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-vertx/3.24.1/quarkus-vertx-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-netty/3.24.1/quarkus-netty-3.24.1.jar:/Users/rakib/.m2/repository/io/netty/netty-codec/4.1.121.Final/netty-codec-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-codec-haproxy/4.1.121.Final/netty-codec-haproxy-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/smallrye/common/smallrye-common-annotation/2.12.0/smallrye-common-annotation-2.12.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-vertx-latebound-mdc-provider/3.24.1/quarkus-vertx-latebound-mdc-provider-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-fault-tolerance-vertx/6.9.1/smallrye-fault-tolerance-vertx-6.9.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-smallrye-stork/3.24.1/quarkus-smallrye-stork-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/stork/stork-api/2.7.3/stork-api-2.7.3.jar:/Users/rakib/.m2/repository/io/smallrye/stork/stork-core/2.7.3/stork-core-2.7.3.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-graphql-client-model/2.13.0/smallrye-graphql-client-model-2.13.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-tls-registry/3.24.1/quarkus-tls-registry-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-tls-registry-spi/3.24.1/quarkus-tls-registry-spi-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/certs/smallrye-private-key-pem-parser/0.9.2/smallrye-private-key-pem-parser-0.9.2.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-graphql-client-implementation-vertx/2.13.0/smallrye-graphql-client-implementation-vertx-2.13.0.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-graphql-client/2.13.0/smallrye-graphql-client-2.13.0.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-graphql-api/2.13.0/smallrye-graphql-api-2.13.0.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-graphql-client-api/2.13.0/smallrye-graphql-client-api-2.13.0.jar:/Users/rakib/.m2/repository/org/eclipse/microprofile/graphql/microprofile-graphql-api/2.0/microprofile-graphql-api-2.0.jar:/Users/rakib/.m2/repository/org/eclipse/microprofile/config/microprofile-config-api/3.1/microprofile-config-api-3.1.jar:/Users/rakib/.m2/repository/jakarta/json/jakarta.json-api/2.1.3/jakarta.json-api-2.1.3.jar:/Users/rakib/.m2/repository/jakarta/json/bind/jakarta.json.bind-api/3.0.1/jakarta.json.bind-api-3.0.1.jar:/Users/rakib/.m2/repository/io/quarkiverse/quinoa/quarkus-quinoa/2.5.4/quarkus-quinoa-2.5.4.jar:/Users/rakib/.m2/repository/io/vertx/vertx-web-client/4.5.16/vertx-web-client-4.5.16.jar:/Users/rakib/.m2/repository/io/vertx/vertx-uri-template/4.5.16/vertx-uri-template-4.5.16.jar:/Users/rakib/.m2/repository/io/vertx/vertx-web-common/4.5.16/vertx-web-common-4.5.16.jar:/Users/rakib/.m2/repository/io/vertx/vertx-auth-common/4.5.16/vertx-auth-common-4.5.16.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-smallrye-graphql/3.24.1/quarkus-smallrye-graphql-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-graphql-cdi/2.13.0/smallrye-graphql-cdi-2.13.0.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-graphql/2.13.0/smallrye-graphql-2.13.0.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-graphql-schema-model/2.13.0/smallrye-graphql-schema-model-2.13.0.jar:/Users/rakib/.m2/repository/com/graphql-java/graphql-java/22.2/graphql-java-22.2.jar:/Users/rakib/.m2/repository/com/graphql-java/java-dataloader/3.3.0/java-dataloader-3.3.0.jar:/Users/rakib/.m2/repository/com/apollographql/federation/federation-graphql-java-support/4.4.0/federation-graphql-java-support-4.4.0.jar:/Users/rakib/.m2/repository/com/google/protobuf/protobuf-java/3.25.5/protobuf-java-3.25.5.jar:/Users/rakib/.m2/repository/com/graphql-java/graphql-java-extended-scalars/21.0/graphql-java-extended-scalars-21.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-smallrye-context-propagation/3.24.1/quarkus-smallrye-context-propagation-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-context-propagation/2.2.1/smallrye-context-propagation-2.2.1.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-context-propagation-api/2.2.1/smallrye-context-propagation-api-2.2.1.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-context-propagation-storage/2.2.1/smallrye-context-propagation-storage-2.2.1.jar:/Users/rakib/.m2/repository/org/eclipse/microprofile/metrics/microprofile-metrics-api/4.0.1/microprofile-metrics-api-4.0.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-arc/3.24.1/quarkus-arc-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/arc/arc/3.24.1/arc-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/mutiny/2.9.0/mutiny-2.9.0.jar:/Users/rakib/.m2/repository/org/jctools/jctools-core/4.0.5/jctools-core-4.0.5.jar:/Users/rakib/.m2/repository/org/eclipse/microprofile/context-propagation/microprofile-context-propagation-api/1.3/microprofile-context-propagation-api-1.3.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-hibernate-orm-panache/3.24.1/quarkus-hibernate-orm-panache-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-hibernate-orm/3.24.1/quarkus-hibernate-orm-3.24.1.jar:/Users/rakib/.m2/repository/org/hibernate/orm/hibernate-core/7.0.3.Final/hibernate-core-7.0.3.Final.jar:/Users/rakib/.m2/repository/org/hibernate/models/hibernate-models/1.0.0/hibernate-models-1.0.0.jar:/Users/rakib/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/rakib/.m2/repository/net/bytebuddy/byte-buddy/1.17.5/byte-buddy-1.17.5.jar:/Users/rakib/.m2/repository/org/hibernate/orm/hibernate-graalvm/7.0.3.Final/hibernate-graalvm-7.0.3.Final.jar:/Users/rakib/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/Users/rakib/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/Users/rakib/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/Users/rakib/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/Users/rakib/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/rakib/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.2.0/jakarta.persistence-api-3.2.0.jar:/Users/rakib/.m2/repository/org/hibernate/quarkus-local-cache/0.3.1/quarkus-local-cache-0.3.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-caffeine/3.24.1/quarkus-caffeine-3.24.1.jar:/Users/rakib/.m2/repository/com/github/ben-manes/caffeine/caffeine/3.2.0/caffeine-3.2.0.jar:/Users/rakib/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/Users/rakib/.m2/repository/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-hibernate-orm-panache-common/3.24.1/quarkus-hibernate-orm-panache-common-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-panache-hibernate-common/3.24.1/quarkus-panache-hibernate-common-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-panache-common/3.24.1/quarkus-panache-common-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-jdbc-h2/3.24.1/quarkus-jdbc-h2-3.24.1.jar:/Users/rakib/.m2/repository/com/h2database/h2/2.3.230/h2-2.3.230.jar:/Users/rakib/.m2/repository/org/locationtech/jts/jts-core/1.19.0/jts-core-1.19.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-jdbc-postgresql/3.24.1/quarkus-jdbc-postgresql-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-agroal/3.24.1/quarkus-agroal-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-datasource/3.24.1/quarkus-datasource-3.24.1.jar:/Users/rakib/.m2/repository/io/agroal/agroal-api/2.7.1/agroal-api-2.7.1.jar:/Users/rakib/.m2/repository/io/agroal/agroal-narayana/2.7.1/agroal-narayana-2.7.1.jar:/Users/rakib/.m2/repository/io/agroal/agroal-pool/2.7.1/agroal-pool-2.7.1.jar:/Users/rakib/.m2/repository/org/postgresql/postgresql/42.7.7/postgresql-42.7.7.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-hibernate-validator/3.24.1/quarkus-hibernate-validator-3.24.1.jar:/Users/rakib/.m2/repository/org/hibernate/validator/hibernate-validator/9.0.1.Final/hibernate-validator-9.0.1.Final.jar:/Users/rakib/.m2/repository/jakarta/validation/jakarta.validation-api/3.1.0/jakarta.validation-api-3.1.0.jar:/Users/rakib/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/Users/rakib/.m2/repository/org/glassfish/expressly/expressly/6.0.0/expressly-6.0.0.jar:/Users/rakib/.m2/repository/jakarta/el/jakarta.el-api/6.0.1/jakarta.el-api-6.0.1.jar:/Users/rakib/.m2/repository/io/smallrye/config/smallrye-config-validator/3.13.2/smallrye-config-validator-3.13.2.jar:/Users/rakib/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/3.1.0/jakarta.ws.rs-api-3.1.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-jsonb/3.24.1/quarkus-jsonb-3.24.1.jar:/Users/rakib/.m2/repository/org/eclipse/yasson/3.0.4/yasson-3.0.4.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-narayana-jta/3.24.1/quarkus-narayana-jta-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-transaction-annotations/3.24.1/quarkus-transaction-annotations-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-mutiny/3.24.1/quarkus-mutiny-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/mutiny-smallrye-context-propagation/2.9.0/mutiny-smallrye-context-propagation-2.9.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-datasource-common/3.24.1/quarkus-datasource-common-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-context-propagation-jta/2.2.1/smallrye-context-propagation-jta-2.2.1.jar:/Users/rakib/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/smallrye-reactive-converter-api/3.0.3/smallrye-reactive-converter-api-3.0.3.jar:/Users/rakib/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/smallrye-reactive-converter-mutiny/3.0.3/smallrye-reactive-converter-mutiny-3.0.3.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/mutiny-zero-flow-adapters/1.1.1/mutiny-zero-flow-adapters-1.1.1.jar:/Users/rakib/.m2/repository/org/jboss/narayana/jta/narayana-jta/7.2.2.Final/narayana-jta-7.2.2.Final.jar:/Users/rakib/.m2/repository/org/jboss/jboss-transaction-spi/8.0.0.Final/jboss-transaction-spi-8.0.0.Final.jar:/Users/rakib/.m2/repository/jakarta/resource/jakarta.resource-api/2.1.0/jakarta.resource-api-2.1.0.jar:/Users/rakib/.m2/repository/org/jboss/invocation/jboss-invocation/2.0.0.Final/jboss-invocation-2.0.0.Final.jar:/Users/rakib/.m2/repository/org/eclipse/microprofile/reactive-streams-operators/microprofile-reactive-streams-operators-api/3.0.1/microprofile-reactive-streams-operators-api-3.0.1.jar:/Users/rakib/.m2/repository/org/jboss/narayana/jts/narayana-jts-integration/7.2.2.Final/narayana-jts-integration-7.2.2.Final.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-security/3.24.1/quarkus-security-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-security-runtime-spi/3.24.1/quarkus-security-runtime-spi-3.24.1.jar:/Users/rakib/.m2/repository/jakarta/interceptor/jakarta.interceptor-api/2.2.0/jakarta.interceptor-api-2.2.0.jar:/Users/rakib/.m2/repository/io/quarkus/security/quarkus-security/2.2.1/quarkus-security-2.2.1.jar:/Users/rakib/.m2/repository/jakarta/enterprise/jakarta.enterprise.cdi-api/4.1.0/jakarta.enterprise.cdi-api-4.1.0.jar:/Users/rakib/.m2/repository/jakarta/enterprise/jakarta.enterprise.lang-model/4.1.0/jakarta.enterprise.lang-model-4.1.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-junit5/3.24.1/quarkus-junit5-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-bootstrap-core/3.24.1/quarkus-bootstrap-core-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-classloader-commons/3.24.1/quarkus-classloader-commons-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-bootstrap-app-model/3.24.1/quarkus-bootstrap-app-model-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/common/smallrye-common-io/2.12.0/smallrye-common-io-2.12.0.jar:/Users/rakib/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.inject/0.9.0.M4/org.eclipse.sisu.inject-0.9.0.M4.jar:/Users/rakib/.m2/repository/org/ow2/asm/asm/9.8/asm-9.8.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-test-common/3.24.1/quarkus-test-common-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-core-deployment/3.24.1/quarkus-core-deployment-3.24.1.jar:/Users/rakib/.m2/repository/org/aesh/readline/2.6/readline-2.6.jar:/Users/rakib/.m2/repository/org/fusesource/jansi/jansi/2.4.0/jansi-2.4.0.jar:/Users/rakib/.m2/repository/org/aesh/aesh/2.8.2/aesh-2.8.2.jar:/Users/rakib/.m2/repository/io/quarkus/gizmo/gizmo/1.9.0/gizmo-1.9.0.jar:/Users/rakib/.m2/repository/org/ow2/asm/asm-util/9.8/asm-util-9.8.jar:/Users/rakib/.m2/repository/org/ow2/asm/asm-analysis/9.8/asm-analysis-9.8.jar:/Users/rakib/.m2/repository/org/ow2/asm/asm-commons/9.8/asm-commons-9.8.jar:/Users/rakib/.m2/repository/org/ow2/asm/asm-tree/9.8/asm-tree-9.8.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-hibernate-validator-spi/3.24.1/quarkus-hibernate-validator-spi-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-class-change-agent/3.24.1/quarkus-class-change-agent-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-devtools-utilities/3.24.1/quarkus-devtools-utilities-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-builder/3.24.1/quarkus-builder-3.24.1.jar:/Users/rakib/.m2/repository/org/graalvm/sdk/nativeimage/23.1.2/nativeimage-23.1.2.jar:/Users/rakib/.m2/repository/org/graalvm/sdk/word/23.1.2/word-23.1.2.jar:/Users/rakib/.m2/repository/org/junit/platform/junit-platform-launcher/1.13.1/junit-platform-launcher-1.13.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-bootstrap-maven-resolver/3.24.1/quarkus-bootstrap-maven-resolver-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/beanbag/smallrye-beanbag-maven/1.5.3/smallrye-beanbag-maven-1.5.3.jar:/Users/rakib/.m2/repository/io/smallrye/beanbag/smallrye-beanbag-sisu/1.5.3/smallrye-beanbag-sisu-1.5.3.jar:/Users/rakib/.m2/repository/io/smallrye/beanbag/smallrye-beanbag/1.5.3/smallrye-beanbag-1.5.3.jar:/Users/rakib/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-artifact/3.9.9/maven-artifact-3.9.9.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-builder-support/3.9.9/maven-builder-support-3.9.9.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-model/3.9.9/maven-model-3.9.9.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-model-builder/3.9.9/maven-model-builder-3.9.9.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-repository-metadata/3.9.9/maven-repository-metadata-3.9.9.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-settings/3.9.9/maven-settings-3.9.9.jar:/Users/rakib/.m2/repository/org/apache/maven/resolver/maven-resolver-api/1.9.22/maven-resolver-api-1.9.22.jar:/Users/rakib/.m2/repository/org/apache/maven/resolver/maven-resolver-impl/1.9.22/maven-resolver-impl-1.9.22.jar:/Users/rakib/.m2/repository/org/apache/maven/resolver/maven-resolver-named-locks/1.9.22/maven-resolver-named-locks-1.9.22.jar:/Users/rakib/.m2/repository/org/apache/maven/resolver/maven-resolver-spi/1.9.22/maven-resolver-spi-1.9.22.jar:/Users/rakib/.m2/repository/org/apache/maven/resolver/maven-resolver-util/1.9.22/maven-resolver-util-1.9.22.jar:/Users/rakib/.m2/repository/org/apache/maven/resolver/maven-resolver-transport-http/1.9.23/maven-resolver-transport-http-1.9.23.jar:/Users/rakib/.m2/repository/org/apache/maven/wagon/wagon-provider-api/3.5.3/wagon-provider-api-3.5.3.jar:/Users/rakib/.m2/repository/org/apache/maven/wagon/wagon-http-shared/3.5.3/wagon-http-shared-3.5.3.jar:/Users/rakib/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.26/plexus-interpolation-1.26.jar:/Users/rakib/.m2/repository/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.jar:/Users/rakib/.m2/repository/org/codehaus/plexus/plexus-xml/4.0.2/plexus-xml-4.0.2.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-xml-impl/4.0.0-alpha-7/maven-xml-impl-4.0.0-alpha-7.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-api-xml/4.0.0-alpha-7/maven-api-xml-4.0.0-alpha-7.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-api-meta/4.0.0-alpha-7/maven-api-meta-4.0.0-alpha-7.jar:/Users/rakib/.m2/repository/org/codehaus/plexus/plexus-cipher/2.0/plexus-cipher-2.0.jar:/Users/rakib/.m2/repository/org/codehaus/plexus/plexus-sec-dispatcher/2.0/plexus-sec-dispatcher-2.0.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-embedder/3.9.9/maven-embedder-3.9.9.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-core/3.9.9/maven-core-3.9.9.jar:/Users/rakib/.m2/repository/org/codehaus/plexus/plexus-component-annotations/2.1.0/plexus-component-annotations-2.1.0.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-plugin-api/3.9.9/maven-plugin-api-3.9.9.jar:/Users/rakib/.m2/repository/org/apache/maven/shared/maven-shared-utils/3.4.2/maven-shared-utils-3.4.2.jar:/Users/rakib/.m2/repository/com/google/inject/guice/5.1.0/guice-5.1.0.jar:/Users/rakib/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/rakib/.m2/repository/com/google/guava/guava/33.4.8-jre/guava-33.4.8-jre.jar:/Users/rakib/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/rakib/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/Users/rakib/.m2/repository/org/codehaus/plexus/plexus-classworlds/2.6.0/plexus-classworlds-2.6.0.jar:/Users/rakib/.m2/repository/commons-cli/commons-cli/1.8.0/commons-cli-1.8.0.jar:/Users/rakib/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.plexus/0.9.0.M4/org.eclipse.sisu.plexus-0.9.0.M4.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-settings-builder/3.9.9/maven-settings-builder-3.9.9.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-resolver-provider/3.9.9/maven-resolver-provider-3.9.9.jar:/Users/rakib/.m2/repository/org/apache/maven/resolver/maven-resolver-connector-basic/1.9.22/maven-resolver-connector-basic-1.9.22.jar:/Users/rakib/.m2/repository/org/apache/maven/resolver/maven-resolver-transport-wagon/1.9.22/maven-resolver-transport-wagon-1.9.22.jar:/Users/rakib/.m2/repository/org/apache/maven/wagon/wagon-http/3.5.3/wagon-http-3.5.3.jar:/Users/rakib/.m2/repository/org/apache/maven/wagon/wagon-file/3.5.3/wagon-file-3.5.3.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-bootstrap-gradle-resolver/3.24.1/quarkus-bootstrap-gradle-resolver-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/jandex/3.3.1/jandex-3.3.1.jar:/Users/rakib/.m2/repository/commons-io/commons-io/2.19.0/commons-io-2.19.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-junit5-config/3.24.1/quarkus-junit5-config-3.24.1.jar:/Users/rakib/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.13.1/junit-jupiter-api-5.13.1.jar:/Users/rakib/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/rakib/.m2/repository/org/junit/platform/junit-platform-commons/1.13.1/junit-platform-commons-1.13.1.jar:/Users/rakib/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/rakib/.m2/repository/org/junit/jupiter/junit-jupiter/5.13.1/junit-jupiter-5.13.1.jar:/Users/rakib/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.13.1/junit-jupiter-params-5.13.1.jar:/Users/rakib/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.13.1/junit-jupiter-engine-5.13.1.jar:/Users/rakib/.m2/repository/org/junit/platform/junit-platform-engine/1.13.1/junit-platform-engine-1.13.1.jar:/Users/rakib/.m2/repository/io/rest-assured/rest-assured/5.5.5/rest-assured-5.5.5.jar:/Users/rakib/.m2/repository/org/apache/groovy/groovy/4.0.22/groovy-4.0.22.jar:/Users/rakib/.m2/repository/org/apache/groovy/groovy-xml/4.0.22/groovy-xml-4.0.22.jar:/Users/rakib/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar:/Users/rakib/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/Users/rakib/.m2/repository/commons-codec/commons-codec/1.18.0/commons-codec-1.18.0.jar:/Users/rakib/.m2/repository/org/apache/httpcomponents/httpmime/4.5.14/httpmime-4.5.14.jar:/Users/rakib/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/rakib/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/rakib/.m2/repository/io/rest-assured/json-path/5.5.5/json-path-5.5.5.jar:/Users/rakib/.m2/repository/org/apache/groovy/groovy-json/4.0.22/groovy-json-4.0.22.jar:/Users/rakib/.m2/repository/io/rest-assured/rest-assured-common/5.5.5/rest-assured-common-5.5.5.jar:/Users/rakib/.m2/repository/io/rest-assured/xml-path/5.5.5/xml-path-5.5.5.jar:/Users/rakib/.m2/repository/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-test-h2/3.24.1/quarkus-test-h2-3.24.1.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Dhaka"/>
+    <property name="logging.initial-configurator.min-level" value="500"/>
+    <property name="java.vm.specification.version" value="23"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="groovy.use.classvalue" value="false"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/graalvm-23.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/rakib/Projects/code-with-quarkus/target/surefire/surefirebooter-20250702142653123_3.jar /Users/rakib/Projects/code-with-quarkus/target/surefire 2025-07-02T14-26-51_910-jvmRun1 surefire-20250702142653123_1tmp surefire_0-20250702142653123_2tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="maven.home" value="/Users/rakib/.m2/wrapper/dists/apache-maven-3.9.9-bin/33b4b2b4/apache-maven-3.9.9"/>
+    <property name="surefire.test.class.path" value="/Users/rakib/Projects/code-with-quarkus/target/test-classes:/Users/rakib/Projects/code-with-quarkus/target/classes:/Users/rakib/.m2/repository/io/quarkus/quarkus-rest/3.24.1/quarkus-rest-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-rest-common/3.24.1/quarkus-rest-common-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/resteasy/reactive/resteasy-reactive-common/3.24.1/resteasy-reactive-common-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/resteasy/reactive/resteasy-reactive-common-types/3.24.1/resteasy-reactive-common-types-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/resteasy/reactive/resteasy-reactive-vertx/3.24.1/resteasy-reactive-vertx-3.24.1.jar:/Users/rakib/.m2/repository/io/vertx/vertx-web/4.5.16/vertx-web-4.5.16.jar:/Users/rakib/.m2/repository/io/vertx/vertx-bridge-common/4.5.16/vertx-bridge-common-4.5.16.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-core/3.19.1/smallrye-mutiny-vertx-core-3.19.1.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-runtime/3.19.1/smallrye-mutiny-vertx-runtime-3.19.1.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/vertx-mutiny-generator/3.19.1/vertx-mutiny-generator-3.19.1.jar:/Users/rakib/.m2/repository/io/vertx/vertx-codegen/4.5.16/vertx-codegen-4.5.16.jar:/Users/rakib/.m2/repository/io/quarkus/resteasy/reactive/resteasy-reactive/3.24.1/resteasy-reactive-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/vertx/utils/quarkus-vertx-utils/3.24.1/quarkus-vertx-utils-3.24.1.jar:/Users/rakib/.m2/repository/jakarta/annotation/jakarta.annotation-api/3.0.0/jakarta.annotation-api-3.0.0.jar:/Users/rakib/.m2/repository/org/jboss/logging/commons-logging-jboss-logging/1.0.0.Final/commons-logging-jboss-logging-1.0.0.Final.jar:/Users/rakib/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/rakib/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/rakib/.m2/repository/org/jboss/logging/jboss-logging/3.6.1.Final/jboss-logging-3.6.1.Final.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-vertx-http/3.24.1/quarkus-vertx-http-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-credentials/3.24.1/quarkus-credentials-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/common/smallrye-common-vertx-context/2.12.0/smallrye-common-vertx-context-2.12.0.jar:/Users/rakib/.m2/repository/io/smallrye/common/smallrye-common-constraint/2.12.0/smallrye-common-constraint-2.12.0.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-web/3.19.1/smallrye-mutiny-vertx-web-3.19.1.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-web-common/3.19.1/smallrye-mutiny-vertx-web-common-3.19.1.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-auth-common/3.19.1/smallrye-mutiny-vertx-auth-common-3.19.1.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-bridge-common/3.19.1/smallrye-mutiny-vertx-bridge-common-3.19.1.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/smallrye-mutiny-vertx-uri-template/3.19.1/smallrye-mutiny-vertx-uri-template-3.19.1.jar:/Users/rakib/.m2/repository/io/github/crac/org-crac/0.1.3/org-crac-0.1.3.jar:/Users/rakib/.m2/repository/com/aayushatharva/brotli4j/brotli4j/1.16.0/brotli4j-1.16.0.jar:/Users/rakib/.m2/repository/com/aayushatharva/brotli4j/service/1.16.0/service-1.16.0.jar:/Users/rakib/.m2/repository/com/aayushatharva/brotli4j/native-osx-aarch64/1.16.0/native-osx-aarch64-1.16.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-jsonp/3.24.1/quarkus-jsonp-3.24.1.jar:/Users/rakib/.m2/repository/org/eclipse/parsson/parsson/1.1.7/parsson-1.1.7.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-virtual-threads/3.24.1/quarkus-virtual-threads-3.24.1.jar:/Users/rakib/.m2/repository/io/vertx/vertx-core/4.5.16/vertx-core-4.5.16.jar:/Users/rakib/.m2/repository/io/netty/netty-common/4.1.121.Final/netty-common-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-buffer/4.1.121.Final/netty-buffer-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-transport/4.1.121.Final/netty-transport-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-handler/4.1.121.Final/netty-handler-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.121.Final/netty-transport-native-unix-common-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-handler-proxy/4.1.121.Final/netty-handler-proxy-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-codec-socks/4.1.121.Final/netty-codec-socks-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-codec-http/4.1.121.Final/netty-codec-http-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-codec-http2/4.1.121.Final/netty-codec-http2-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-resolver/4.1.121.Final/netty-resolver-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-resolver-dns/4.1.121.Final/netty-resolver-dns-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-codec-dns/4.1.121.Final/netty-codec-dns-4.1.121.Final.jar:/Users/rakib/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.19.1/jackson-core-2.19.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-rest-jackson/3.24.1/quarkus-rest-jackson-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-rest-jackson-common/3.24.1/quarkus-rest-jackson-common-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/resteasy/reactive/resteasy-reactive-jackson/3.24.1/resteasy-reactive-jackson-3.24.1.jar:/Users/rakib/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.19.1/jackson-databind-2.19.1.jar:/Users/rakib/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.19.1/jackson-annotations-2.19.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-jackson/3.24.1/quarkus-jackson-3.24.1.jar:/Users/rakib/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.19.1/jackson-datatype-jsr310-2.19.1.jar:/Users/rakib/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.19.1/jackson-datatype-jdk8-2.19.1.jar:/Users/rakib/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.19.1/jackson-module-parameter-names-2.19.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-smallrye-graphql-client/3.24.1/quarkus-smallrye-graphql-client-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-core/3.24.1/quarkus-core-3.24.1.jar:/Users/rakib/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/rakib/.m2/repository/io/smallrye/common/smallrye-common-os/2.12.0/smallrye-common-os-2.12.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-ide-launcher/3.24.1/quarkus-ide-launcher-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-development-mode-spi/3.24.1/quarkus-development-mode-spi-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/config/smallrye-config/3.13.2/smallrye-config-3.13.2.jar:/Users/rakib/.m2/repository/io/smallrye/config/smallrye-config-core/3.13.2/smallrye-config-core-3.13.2.jar:/Users/rakib/.m2/repository/io/smallrye/common/smallrye-common-classloader/2.12.0/smallrye-common-classloader-2.12.0.jar:/Users/rakib/.m2/repository/io/smallrye/config/smallrye-config-common/3.13.2/smallrye-config-common-3.13.2.jar:/Users/rakib/.m2/repository/org/jboss/logmanager/jboss-logmanager/3.1.2.Final/jboss-logmanager-3.1.2.Final.jar:/Users/rakib/.m2/repository/io/smallrye/common/smallrye-common-cpu/2.12.0/smallrye-common-cpu-2.12.0.jar:/Users/rakib/.m2/repository/io/smallrye/common/smallrye-common-expression/2.12.0/smallrye-common-expression-2.12.0.jar:/Users/rakib/.m2/repository/io/smallrye/common/smallrye-common-net/2.12.0/smallrye-common-net-2.12.0.jar:/Users/rakib/.m2/repository/io/smallrye/common/smallrye-common-ref/2.12.0/smallrye-common-ref-2.12.0.jar:/Users/rakib/.m2/repository/org/jboss/threads/jboss-threads/3.9.1/jboss-threads-3.9.1.jar:/Users/rakib/.m2/repository/io/smallrye/common/smallrye-common-function/2.12.0/smallrye-common-function-2.12.0.jar:/Users/rakib/.m2/repository/org/slf4j/slf4j-api/2.0.6/slf4j-api-2.0.6.jar:/Users/rakib/.m2/repository/org/jboss/slf4j/slf4j-jboss-logmanager/2.0.0.Final/slf4j-jboss-logmanager-2.0.0.Final.jar:/Users/rakib/.m2/repository/org/wildfly/common/wildfly-common/2.0.1/wildfly-common-2.0.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-bootstrap-runner/3.24.1/quarkus-bootstrap-runner-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-fs-util/1.0.0/quarkus-fs-util-1.0.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-vertx/3.24.1/quarkus-vertx-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-netty/3.24.1/quarkus-netty-3.24.1.jar:/Users/rakib/.m2/repository/io/netty/netty-codec/4.1.121.Final/netty-codec-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/netty/netty-codec-haproxy/4.1.121.Final/netty-codec-haproxy-4.1.121.Final.jar:/Users/rakib/.m2/repository/io/smallrye/common/smallrye-common-annotation/2.12.0/smallrye-common-annotation-2.12.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-vertx-latebound-mdc-provider/3.24.1/quarkus-vertx-latebound-mdc-provider-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-fault-tolerance-vertx/6.9.1/smallrye-fault-tolerance-vertx-6.9.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-smallrye-stork/3.24.1/quarkus-smallrye-stork-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/stork/stork-api/2.7.3/stork-api-2.7.3.jar:/Users/rakib/.m2/repository/io/smallrye/stork/stork-core/2.7.3/stork-core-2.7.3.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-graphql-client-model/2.13.0/smallrye-graphql-client-model-2.13.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-tls-registry/3.24.1/quarkus-tls-registry-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-tls-registry-spi/3.24.1/quarkus-tls-registry-spi-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/certs/smallrye-private-key-pem-parser/0.9.2/smallrye-private-key-pem-parser-0.9.2.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-graphql-client-implementation-vertx/2.13.0/smallrye-graphql-client-implementation-vertx-2.13.0.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-graphql-client/2.13.0/smallrye-graphql-client-2.13.0.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-graphql-api/2.13.0/smallrye-graphql-api-2.13.0.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-graphql-client-api/2.13.0/smallrye-graphql-client-api-2.13.0.jar:/Users/rakib/.m2/repository/org/eclipse/microprofile/graphql/microprofile-graphql-api/2.0/microprofile-graphql-api-2.0.jar:/Users/rakib/.m2/repository/org/eclipse/microprofile/config/microprofile-config-api/3.1/microprofile-config-api-3.1.jar:/Users/rakib/.m2/repository/jakarta/json/jakarta.json-api/2.1.3/jakarta.json-api-2.1.3.jar:/Users/rakib/.m2/repository/jakarta/json/bind/jakarta.json.bind-api/3.0.1/jakarta.json.bind-api-3.0.1.jar:/Users/rakib/.m2/repository/io/quarkiverse/quinoa/quarkus-quinoa/2.5.4/quarkus-quinoa-2.5.4.jar:/Users/rakib/.m2/repository/io/vertx/vertx-web-client/4.5.16/vertx-web-client-4.5.16.jar:/Users/rakib/.m2/repository/io/vertx/vertx-uri-template/4.5.16/vertx-uri-template-4.5.16.jar:/Users/rakib/.m2/repository/io/vertx/vertx-web-common/4.5.16/vertx-web-common-4.5.16.jar:/Users/rakib/.m2/repository/io/vertx/vertx-auth-common/4.5.16/vertx-auth-common-4.5.16.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-smallrye-graphql/3.24.1/quarkus-smallrye-graphql-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-graphql-cdi/2.13.0/smallrye-graphql-cdi-2.13.0.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-graphql/2.13.0/smallrye-graphql-2.13.0.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-graphql-schema-model/2.13.0/smallrye-graphql-schema-model-2.13.0.jar:/Users/rakib/.m2/repository/com/graphql-java/graphql-java/22.2/graphql-java-22.2.jar:/Users/rakib/.m2/repository/com/graphql-java/java-dataloader/3.3.0/java-dataloader-3.3.0.jar:/Users/rakib/.m2/repository/com/apollographql/federation/federation-graphql-java-support/4.4.0/federation-graphql-java-support-4.4.0.jar:/Users/rakib/.m2/repository/com/google/protobuf/protobuf-java/3.25.5/protobuf-java-3.25.5.jar:/Users/rakib/.m2/repository/com/graphql-java/graphql-java-extended-scalars/21.0/graphql-java-extended-scalars-21.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-smallrye-context-propagation/3.24.1/quarkus-smallrye-context-propagation-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-context-propagation/2.2.1/smallrye-context-propagation-2.2.1.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-context-propagation-api/2.2.1/smallrye-context-propagation-api-2.2.1.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-context-propagation-storage/2.2.1/smallrye-context-propagation-storage-2.2.1.jar:/Users/rakib/.m2/repository/org/eclipse/microprofile/metrics/microprofile-metrics-api/4.0.1/microprofile-metrics-api-4.0.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-arc/3.24.1/quarkus-arc-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/arc/arc/3.24.1/arc-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/mutiny/2.9.0/mutiny-2.9.0.jar:/Users/rakib/.m2/repository/org/jctools/jctools-core/4.0.5/jctools-core-4.0.5.jar:/Users/rakib/.m2/repository/org/eclipse/microprofile/context-propagation/microprofile-context-propagation-api/1.3/microprofile-context-propagation-api-1.3.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-hibernate-orm-panache/3.24.1/quarkus-hibernate-orm-panache-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-hibernate-orm/3.24.1/quarkus-hibernate-orm-3.24.1.jar:/Users/rakib/.m2/repository/org/hibernate/orm/hibernate-core/7.0.3.Final/hibernate-core-7.0.3.Final.jar:/Users/rakib/.m2/repository/org/hibernate/models/hibernate-models/1.0.0/hibernate-models-1.0.0.jar:/Users/rakib/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/rakib/.m2/repository/net/bytebuddy/byte-buddy/1.17.5/byte-buddy-1.17.5.jar:/Users/rakib/.m2/repository/org/hibernate/orm/hibernate-graalvm/7.0.3.Final/hibernate-graalvm-7.0.3.Final.jar:/Users/rakib/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/Users/rakib/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/Users/rakib/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/Users/rakib/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/Users/rakib/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/rakib/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.2.0/jakarta.persistence-api-3.2.0.jar:/Users/rakib/.m2/repository/org/hibernate/quarkus-local-cache/0.3.1/quarkus-local-cache-0.3.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-caffeine/3.24.1/quarkus-caffeine-3.24.1.jar:/Users/rakib/.m2/repository/com/github/ben-manes/caffeine/caffeine/3.2.0/caffeine-3.2.0.jar:/Users/rakib/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/Users/rakib/.m2/repository/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-hibernate-orm-panache-common/3.24.1/quarkus-hibernate-orm-panache-common-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-panache-hibernate-common/3.24.1/quarkus-panache-hibernate-common-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-panache-common/3.24.1/quarkus-panache-common-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-jdbc-h2/3.24.1/quarkus-jdbc-h2-3.24.1.jar:/Users/rakib/.m2/repository/com/h2database/h2/2.3.230/h2-2.3.230.jar:/Users/rakib/.m2/repository/org/locationtech/jts/jts-core/1.19.0/jts-core-1.19.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-jdbc-postgresql/3.24.1/quarkus-jdbc-postgresql-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-agroal/3.24.1/quarkus-agroal-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-datasource/3.24.1/quarkus-datasource-3.24.1.jar:/Users/rakib/.m2/repository/io/agroal/agroal-api/2.7.1/agroal-api-2.7.1.jar:/Users/rakib/.m2/repository/io/agroal/agroal-narayana/2.7.1/agroal-narayana-2.7.1.jar:/Users/rakib/.m2/repository/io/agroal/agroal-pool/2.7.1/agroal-pool-2.7.1.jar:/Users/rakib/.m2/repository/org/postgresql/postgresql/42.7.7/postgresql-42.7.7.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-hibernate-validator/3.24.1/quarkus-hibernate-validator-3.24.1.jar:/Users/rakib/.m2/repository/org/hibernate/validator/hibernate-validator/9.0.1.Final/hibernate-validator-9.0.1.Final.jar:/Users/rakib/.m2/repository/jakarta/validation/jakarta.validation-api/3.1.0/jakarta.validation-api-3.1.0.jar:/Users/rakib/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/Users/rakib/.m2/repository/org/glassfish/expressly/expressly/6.0.0/expressly-6.0.0.jar:/Users/rakib/.m2/repository/jakarta/el/jakarta.el-api/6.0.1/jakarta.el-api-6.0.1.jar:/Users/rakib/.m2/repository/io/smallrye/config/smallrye-config-validator/3.13.2/smallrye-config-validator-3.13.2.jar:/Users/rakib/.m2/repository/jakarta/ws/rs/jakarta.ws.rs-api/3.1.0/jakarta.ws.rs-api-3.1.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-jsonb/3.24.1/quarkus-jsonb-3.24.1.jar:/Users/rakib/.m2/repository/org/eclipse/yasson/3.0.4/yasson-3.0.4.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-narayana-jta/3.24.1/quarkus-narayana-jta-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-transaction-annotations/3.24.1/quarkus-transaction-annotations-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-mutiny/3.24.1/quarkus-mutiny-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/mutiny-smallrye-context-propagation/2.9.0/mutiny-smallrye-context-propagation-2.9.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-datasource-common/3.24.1/quarkus-datasource-common-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/smallrye-context-propagation-jta/2.2.1/smallrye-context-propagation-jta-2.2.1.jar:/Users/rakib/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/smallrye-reactive-converter-api/3.0.3/smallrye-reactive-converter-api-3.0.3.jar:/Users/rakib/.m2/repository/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/smallrye-reactive-converter-mutiny/3.0.3/smallrye-reactive-converter-mutiny-3.0.3.jar:/Users/rakib/.m2/repository/io/smallrye/reactive/mutiny-zero-flow-adapters/1.1.1/mutiny-zero-flow-adapters-1.1.1.jar:/Users/rakib/.m2/repository/org/jboss/narayana/jta/narayana-jta/7.2.2.Final/narayana-jta-7.2.2.Final.jar:/Users/rakib/.m2/repository/org/jboss/jboss-transaction-spi/8.0.0.Final/jboss-transaction-spi-8.0.0.Final.jar:/Users/rakib/.m2/repository/jakarta/resource/jakarta.resource-api/2.1.0/jakarta.resource-api-2.1.0.jar:/Users/rakib/.m2/repository/org/jboss/invocation/jboss-invocation/2.0.0.Final/jboss-invocation-2.0.0.Final.jar:/Users/rakib/.m2/repository/org/eclipse/microprofile/reactive-streams-operators/microprofile-reactive-streams-operators-api/3.0.1/microprofile-reactive-streams-operators-api-3.0.1.jar:/Users/rakib/.m2/repository/org/jboss/narayana/jts/narayana-jts-integration/7.2.2.Final/narayana-jts-integration-7.2.2.Final.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-security/3.24.1/quarkus-security-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-security-runtime-spi/3.24.1/quarkus-security-runtime-spi-3.24.1.jar:/Users/rakib/.m2/repository/jakarta/interceptor/jakarta.interceptor-api/2.2.0/jakarta.interceptor-api-2.2.0.jar:/Users/rakib/.m2/repository/io/quarkus/security/quarkus-security/2.2.1/quarkus-security-2.2.1.jar:/Users/rakib/.m2/repository/jakarta/enterprise/jakarta.enterprise.cdi-api/4.1.0/jakarta.enterprise.cdi-api-4.1.0.jar:/Users/rakib/.m2/repository/jakarta/enterprise/jakarta.enterprise.lang-model/4.1.0/jakarta.enterprise.lang-model-4.1.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-junit5/3.24.1/quarkus-junit5-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-bootstrap-core/3.24.1/quarkus-bootstrap-core-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-classloader-commons/3.24.1/quarkus-classloader-commons-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-bootstrap-app-model/3.24.1/quarkus-bootstrap-app-model-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/common/smallrye-common-io/2.12.0/smallrye-common-io-2.12.0.jar:/Users/rakib/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.inject/0.9.0.M4/org.eclipse.sisu.inject-0.9.0.M4.jar:/Users/rakib/.m2/repository/org/ow2/asm/asm/9.8/asm-9.8.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-test-common/3.24.1/quarkus-test-common-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-core-deployment/3.24.1/quarkus-core-deployment-3.24.1.jar:/Users/rakib/.m2/repository/org/aesh/readline/2.6/readline-2.6.jar:/Users/rakib/.m2/repository/org/fusesource/jansi/jansi/2.4.0/jansi-2.4.0.jar:/Users/rakib/.m2/repository/org/aesh/aesh/2.8.2/aesh-2.8.2.jar:/Users/rakib/.m2/repository/io/quarkus/gizmo/gizmo/1.9.0/gizmo-1.9.0.jar:/Users/rakib/.m2/repository/org/ow2/asm/asm-util/9.8/asm-util-9.8.jar:/Users/rakib/.m2/repository/org/ow2/asm/asm-analysis/9.8/asm-analysis-9.8.jar:/Users/rakib/.m2/repository/org/ow2/asm/asm-commons/9.8/asm-commons-9.8.jar:/Users/rakib/.m2/repository/org/ow2/asm/asm-tree/9.8/asm-tree-9.8.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-hibernate-validator-spi/3.24.1/quarkus-hibernate-validator-spi-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-class-change-agent/3.24.1/quarkus-class-change-agent-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-devtools-utilities/3.24.1/quarkus-devtools-utilities-3.24.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-builder/3.24.1/quarkus-builder-3.24.1.jar:/Users/rakib/.m2/repository/org/graalvm/sdk/nativeimage/23.1.2/nativeimage-23.1.2.jar:/Users/rakib/.m2/repository/org/graalvm/sdk/word/23.1.2/word-23.1.2.jar:/Users/rakib/.m2/repository/org/junit/platform/junit-platform-launcher/1.13.1/junit-platform-launcher-1.13.1.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-bootstrap-maven-resolver/3.24.1/quarkus-bootstrap-maven-resolver-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/beanbag/smallrye-beanbag-maven/1.5.3/smallrye-beanbag-maven-1.5.3.jar:/Users/rakib/.m2/repository/io/smallrye/beanbag/smallrye-beanbag-sisu/1.5.3/smallrye-beanbag-sisu-1.5.3.jar:/Users/rakib/.m2/repository/io/smallrye/beanbag/smallrye-beanbag/1.5.3/smallrye-beanbag-1.5.3.jar:/Users/rakib/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-artifact/3.9.9/maven-artifact-3.9.9.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-builder-support/3.9.9/maven-builder-support-3.9.9.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-model/3.9.9/maven-model-3.9.9.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-model-builder/3.9.9/maven-model-builder-3.9.9.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-repository-metadata/3.9.9/maven-repository-metadata-3.9.9.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-settings/3.9.9/maven-settings-3.9.9.jar:/Users/rakib/.m2/repository/org/apache/maven/resolver/maven-resolver-api/1.9.22/maven-resolver-api-1.9.22.jar:/Users/rakib/.m2/repository/org/apache/maven/resolver/maven-resolver-impl/1.9.22/maven-resolver-impl-1.9.22.jar:/Users/rakib/.m2/repository/org/apache/maven/resolver/maven-resolver-named-locks/1.9.22/maven-resolver-named-locks-1.9.22.jar:/Users/rakib/.m2/repository/org/apache/maven/resolver/maven-resolver-spi/1.9.22/maven-resolver-spi-1.9.22.jar:/Users/rakib/.m2/repository/org/apache/maven/resolver/maven-resolver-util/1.9.22/maven-resolver-util-1.9.22.jar:/Users/rakib/.m2/repository/org/apache/maven/resolver/maven-resolver-transport-http/1.9.23/maven-resolver-transport-http-1.9.23.jar:/Users/rakib/.m2/repository/org/apache/maven/wagon/wagon-provider-api/3.5.3/wagon-provider-api-3.5.3.jar:/Users/rakib/.m2/repository/org/apache/maven/wagon/wagon-http-shared/3.5.3/wagon-http-shared-3.5.3.jar:/Users/rakib/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.26/plexus-interpolation-1.26.jar:/Users/rakib/.m2/repository/org/codehaus/plexus/plexus-utils/3.5.1/plexus-utils-3.5.1.jar:/Users/rakib/.m2/repository/org/codehaus/plexus/plexus-xml/4.0.2/plexus-xml-4.0.2.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-xml-impl/4.0.0-alpha-7/maven-xml-impl-4.0.0-alpha-7.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-api-xml/4.0.0-alpha-7/maven-api-xml-4.0.0-alpha-7.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-api-meta/4.0.0-alpha-7/maven-api-meta-4.0.0-alpha-7.jar:/Users/rakib/.m2/repository/org/codehaus/plexus/plexus-cipher/2.0/plexus-cipher-2.0.jar:/Users/rakib/.m2/repository/org/codehaus/plexus/plexus-sec-dispatcher/2.0/plexus-sec-dispatcher-2.0.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-embedder/3.9.9/maven-embedder-3.9.9.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-core/3.9.9/maven-core-3.9.9.jar:/Users/rakib/.m2/repository/org/codehaus/plexus/plexus-component-annotations/2.1.0/plexus-component-annotations-2.1.0.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-plugin-api/3.9.9/maven-plugin-api-3.9.9.jar:/Users/rakib/.m2/repository/org/apache/maven/shared/maven-shared-utils/3.4.2/maven-shared-utils-3.4.2.jar:/Users/rakib/.m2/repository/com/google/inject/guice/5.1.0/guice-5.1.0.jar:/Users/rakib/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/rakib/.m2/repository/com/google/guava/guava/33.4.8-jre/guava-33.4.8-jre.jar:/Users/rakib/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/rakib/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/Users/rakib/.m2/repository/org/codehaus/plexus/plexus-classworlds/2.6.0/plexus-classworlds-2.6.0.jar:/Users/rakib/.m2/repository/commons-cli/commons-cli/1.8.0/commons-cli-1.8.0.jar:/Users/rakib/.m2/repository/org/eclipse/sisu/org.eclipse.sisu.plexus/0.9.0.M4/org.eclipse.sisu.plexus-0.9.0.M4.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-settings-builder/3.9.9/maven-settings-builder-3.9.9.jar:/Users/rakib/.m2/repository/org/apache/maven/maven-resolver-provider/3.9.9/maven-resolver-provider-3.9.9.jar:/Users/rakib/.m2/repository/org/apache/maven/resolver/maven-resolver-connector-basic/1.9.22/maven-resolver-connector-basic-1.9.22.jar:/Users/rakib/.m2/repository/org/apache/maven/resolver/maven-resolver-transport-wagon/1.9.22/maven-resolver-transport-wagon-1.9.22.jar:/Users/rakib/.m2/repository/org/apache/maven/wagon/wagon-http/3.5.3/wagon-http-3.5.3.jar:/Users/rakib/.m2/repository/org/apache/maven/wagon/wagon-file/3.5.3/wagon-file-3.5.3.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-bootstrap-gradle-resolver/3.24.1/quarkus-bootstrap-gradle-resolver-3.24.1.jar:/Users/rakib/.m2/repository/io/smallrye/jandex/3.3.1/jandex-3.3.1.jar:/Users/rakib/.m2/repository/commons-io/commons-io/2.19.0/commons-io-2.19.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-junit5-config/3.24.1/quarkus-junit5-config-3.24.1.jar:/Users/rakib/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.13.1/junit-jupiter-api-5.13.1.jar:/Users/rakib/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/rakib/.m2/repository/org/junit/platform/junit-platform-commons/1.13.1/junit-platform-commons-1.13.1.jar:/Users/rakib/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/rakib/.m2/repository/org/junit/jupiter/junit-jupiter/5.13.1/junit-jupiter-5.13.1.jar:/Users/rakib/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.13.1/junit-jupiter-params-5.13.1.jar:/Users/rakib/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.13.1/junit-jupiter-engine-5.13.1.jar:/Users/rakib/.m2/repository/org/junit/platform/junit-platform-engine/1.13.1/junit-platform-engine-1.13.1.jar:/Users/rakib/.m2/repository/io/rest-assured/rest-assured/5.5.5/rest-assured-5.5.5.jar:/Users/rakib/.m2/repository/org/apache/groovy/groovy/4.0.22/groovy-4.0.22.jar:/Users/rakib/.m2/repository/org/apache/groovy/groovy-xml/4.0.22/groovy-xml-4.0.22.jar:/Users/rakib/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar:/Users/rakib/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:/Users/rakib/.m2/repository/commons-codec/commons-codec/1.18.0/commons-codec-1.18.0.jar:/Users/rakib/.m2/repository/org/apache/httpcomponents/httpmime/4.5.14/httpmime-4.5.14.jar:/Users/rakib/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/rakib/.m2/repository/org/ccil/cowan/tagsoup/tagsoup/1.2.1/tagsoup-1.2.1.jar:/Users/rakib/.m2/repository/io/rest-assured/json-path/5.5.5/json-path-5.5.5.jar:/Users/rakib/.m2/repository/org/apache/groovy/groovy-json/4.0.22/groovy-json-4.0.22.jar:/Users/rakib/.m2/repository/io/rest-assured/rest-assured-common/5.5.5/rest-assured-common-5.5.5.jar:/Users/rakib/.m2/repository/io/rest-assured/xml-path/5.5.5/xml-path-5.5.5.jar:/Users/rakib/.m2/repository/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar:/Users/rakib/.m2/repository/io/quarkus/quarkus-test-h2/3.24.1/quarkus-test-h2-3.24.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="vertx.disableWebsockets" value="true"/>
+    <property name="user.home" value="/Users/rakib"/>
+    <property name="user.language" value="en"/>
+    <property name="jboss.log-version" value="false"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="io.netty.allocator.maxOrder" value="3"/>
+    <property name="java.version.date" value="2024-10-15"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/graalvm-23.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/rakib/Projects/code-with-quarkus"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="jdk.internal.vm.ci.enabled" value="true"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="io.netty.allocator.disableCacheFinalizersForFastThreadLocalThreads" value="true"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/rakib/Projects/code-with-quarkus/target/surefire/surefirebooter-20250702142653123_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="23.0.1+11-jvmci-b01"/>
+    <property name="user.name" value="rakib"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="smallrye.graphql.tracing.enabled" value="false"/>
+    <property name="os.version" value="15.5"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Oracle GraalVM 23.0.1+11.1"/>
+    <property name="smallrye.graphql.metrics.enabled" value="false"/>
+    <property name="localRepository" value="/Users/rakib/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/1c/ywjdjvqs1bq_wsnfynpj840c0000gn/T/"/>
+    <property name="smallrye.graphql.events.enabled" value="false"/>
+    <property name="quarkus.log.file.path" value="target/quarkus.log"/>
+    <property name="java.version" value="23.0.1"/>
+    <property name="java.util.concurrent.ForkJoinPool.common.threadFactory" value="io.quarkus.bootstrap.forkjoin.QuarkusForkJoinWorkerThreadFactory"/>
+    <property name="user.dir" value="/Users/rakib/Projects/code-with-quarkus"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="smallrye.graphql.printDataFetcherException" value="true"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="vertx.disableDnsResolver" value="true"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.util.logging.manager" value="org.jboss.logmanager.LogManager"/>
+    <property name="java.library.path" value="/Users/rakib/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="jdk.console" value="java.base"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="vertx.disableTCCL" value="true"/>
+    <property name="smallrye.graphql.federation.enabled" value="false"/>
+    <property name="java.vm.version" value="23.0.1+11-jvmci-b01"/>
+    <property name="vertx.logger-delegate-factory-class-name" value="io.quarkus.vertx.core.runtime.VertxLogDelegateFactory"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="io.netty.machineId" value="86:80:1e:e3:84:c8:ab:30"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="67.0"/>
+  </properties>
+  <testcase name="testDeactivateBrand" classname="org.acme.service.BrandServiceTest" time="0.002">
+    <error message="JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: &quot;FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))&quot;; SQL statement:&#10;delete from brands b1_0 [23503-230]] [n/a]" type="org.hibernate.exception.ConstraintViolationException"><![CDATA[org.hibernate.exception.ConstraintViolationException: 
+JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]] [n/a]
+	at org.hibernate.dialect.H2Dialect.lambda$buildSQLExceptionConversionDelegate$3(H2Dialect.java:829)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.handleException(StandardJdbcMutationExecutor.java:102)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:91)
+	at org.hibernate.query.sqm.internal.SimpleDeleteQueryPlan.executeUpdate(SimpleDeleteQueryPlan.java:181)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doExecuteUpdate(QuerySqmImpl.java:543)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.executeUpdate(QuerySqmImpl.java:515)
+	at io.quarkus.hibernate.orm.panache.common.runtime.AbstractJpaOperations.deleteAll(AbstractJpaOperations.java:400)
+	at org.acme.entity.Brand.deleteAll(Brand.java)
+	at org.acme.service.BrandServiceTest.setUp(BrandServiceTest.java:29)
+	at org.acme.service.BrandServiceTest_Subclass.setUp$$superforward(Unknown Source)
+	at org.acme.service.BrandServiceTest_Subclass$$function$$1.apply(Unknown Source)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:73)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:62)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:136)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:107)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:61)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(Unknown Source)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
+	at org.acme.service.BrandServiceTest_Subclass.setUp(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1000)
+	at io.quarkus.test.junit.QuarkusTestExtension.interceptBeforeEachMethod(QuarkusTestExtension.java:829)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:362)
+	at org.h2.constraint.ConstraintReferential.checkRowRefTable(ConstraintReferential.java:379)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:253)
+	at org.h2.table.Table.fireConstraints(Table.java:1227)
+	at org.h2.table.Table.fireAfterRow(Table.java:1245)
+	at org.h2.command.dml.Delete.update(Delete.java:92)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:213)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:172)
+	at io.agroal.pool.wrapper.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:90)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:77)
+	... 25 more
+]]></error>
+    <system-out><![CDATA[2025-07-02 14:26:57,777 DEBUG [org.hib.SQL] (main) delete from brands b1_0
+2025-07-02 14:26:57,778 WARN  [org.hib.orm.jdb.error] (main) HHH000247: ErrorCode: 23503, SQLState: 23503
+2025-07-02 14:26:57,778 WARN  [org.hib.orm.jdb.error] (main) Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+]]></system-out>
+  </testcase>
+  <testcase name="testDeleteBrand" classname="org.acme.service.BrandServiceTest" time="0.002">
+    <error message="JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: &quot;FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))&quot;; SQL statement:&#10;delete from brands b1_0 [23503-230]] [n/a]" type="org.hibernate.exception.ConstraintViolationException"><![CDATA[org.hibernate.exception.ConstraintViolationException: 
+JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]] [n/a]
+	at org.hibernate.dialect.H2Dialect.lambda$buildSQLExceptionConversionDelegate$3(H2Dialect.java:829)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.handleException(StandardJdbcMutationExecutor.java:102)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:91)
+	at org.hibernate.query.sqm.internal.SimpleDeleteQueryPlan.executeUpdate(SimpleDeleteQueryPlan.java:181)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doExecuteUpdate(QuerySqmImpl.java:543)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.executeUpdate(QuerySqmImpl.java:515)
+	at io.quarkus.hibernate.orm.panache.common.runtime.AbstractJpaOperations.deleteAll(AbstractJpaOperations.java:400)
+	at org.acme.entity.Brand.deleteAll(Brand.java)
+	at org.acme.service.BrandServiceTest.setUp(BrandServiceTest.java:29)
+	at org.acme.service.BrandServiceTest_Subclass.setUp$$superforward(Unknown Source)
+	at org.acme.service.BrandServiceTest_Subclass$$function$$1.apply(Unknown Source)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:73)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:62)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:136)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:107)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:61)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(Unknown Source)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
+	at org.acme.service.BrandServiceTest_Subclass.setUp(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1000)
+	at io.quarkus.test.junit.QuarkusTestExtension.interceptBeforeEachMethod(QuarkusTestExtension.java:829)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:362)
+	at org.h2.constraint.ConstraintReferential.checkRowRefTable(ConstraintReferential.java:379)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:253)
+	at org.h2.table.Table.fireConstraints(Table.java:1227)
+	at org.h2.table.Table.fireAfterRow(Table.java:1245)
+	at org.h2.command.dml.Delete.update(Delete.java:92)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:213)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:172)
+	at io.agroal.pool.wrapper.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:90)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:77)
+	... 25 more
+]]></error>
+    <system-out><![CDATA[2025-07-02 14:26:57,780 DEBUG [org.hib.SQL] (main) delete from brands b1_0
+2025-07-02 14:26:57,781 WARN  [org.hib.orm.jdb.error] (main) HHH000247: ErrorCode: 23503, SQLState: 23503
+2025-07-02 14:26:57,781 WARN  [org.hib.orm.jdb.error] (main) Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+]]></system-out>
+  </testcase>
+  <testcase name="testGetAllActiveBrands" classname="org.acme.service.BrandServiceTest" time="0.002">
+    <error message="JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: &quot;FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))&quot;; SQL statement:&#10;delete from brands b1_0 [23503-230]] [n/a]" type="org.hibernate.exception.ConstraintViolationException"><![CDATA[org.hibernate.exception.ConstraintViolationException: 
+JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]] [n/a]
+	at org.hibernate.dialect.H2Dialect.lambda$buildSQLExceptionConversionDelegate$3(H2Dialect.java:829)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.handleException(StandardJdbcMutationExecutor.java:102)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:91)
+	at org.hibernate.query.sqm.internal.SimpleDeleteQueryPlan.executeUpdate(SimpleDeleteQueryPlan.java:181)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doExecuteUpdate(QuerySqmImpl.java:543)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.executeUpdate(QuerySqmImpl.java:515)
+	at io.quarkus.hibernate.orm.panache.common.runtime.AbstractJpaOperations.deleteAll(AbstractJpaOperations.java:400)
+	at org.acme.entity.Brand.deleteAll(Brand.java)
+	at org.acme.service.BrandServiceTest.setUp(BrandServiceTest.java:29)
+	at org.acme.service.BrandServiceTest_Subclass.setUp$$superforward(Unknown Source)
+	at org.acme.service.BrandServiceTest_Subclass$$function$$1.apply(Unknown Source)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:73)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:62)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:136)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:107)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:61)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(Unknown Source)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
+	at org.acme.service.BrandServiceTest_Subclass.setUp(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1000)
+	at io.quarkus.test.junit.QuarkusTestExtension.interceptBeforeEachMethod(QuarkusTestExtension.java:829)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:362)
+	at org.h2.constraint.ConstraintReferential.checkRowRefTable(ConstraintReferential.java:379)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:253)
+	at org.h2.table.Table.fireConstraints(Table.java:1227)
+	at org.h2.table.Table.fireAfterRow(Table.java:1245)
+	at org.h2.command.dml.Delete.update(Delete.java:92)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:213)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:172)
+	at io.agroal.pool.wrapper.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:90)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:77)
+	... 25 more
+]]></error>
+    <system-out><![CDATA[2025-07-02 14:26:57,783 DEBUG [org.hib.SQL] (main) delete from brands b1_0
+2025-07-02 14:26:57,783 WARN  [org.hib.orm.jdb.error] (main) HHH000247: ErrorCode: 23503, SQLState: 23503
+2025-07-02 14:26:57,783 WARN  [org.hib.orm.jdb.error] (main) Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+]]></system-out>
+  </testcase>
+  <testcase name="testUpdateBrand" classname="org.acme.service.BrandServiceTest" time="0.004">
+    <error message="JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: &quot;FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))&quot;; SQL statement:&#10;delete from brands b1_0 [23503-230]] [n/a]" type="org.hibernate.exception.ConstraintViolationException"><![CDATA[org.hibernate.exception.ConstraintViolationException: 
+JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]] [n/a]
+	at org.hibernate.dialect.H2Dialect.lambda$buildSQLExceptionConversionDelegate$3(H2Dialect.java:829)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.handleException(StandardJdbcMutationExecutor.java:102)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:91)
+	at org.hibernate.query.sqm.internal.SimpleDeleteQueryPlan.executeUpdate(SimpleDeleteQueryPlan.java:181)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doExecuteUpdate(QuerySqmImpl.java:543)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.executeUpdate(QuerySqmImpl.java:515)
+	at io.quarkus.hibernate.orm.panache.common.runtime.AbstractJpaOperations.deleteAll(AbstractJpaOperations.java:400)
+	at org.acme.entity.Brand.deleteAll(Brand.java)
+	at org.acme.service.BrandServiceTest.setUp(BrandServiceTest.java:29)
+	at org.acme.service.BrandServiceTest_Subclass.setUp$$superforward(Unknown Source)
+	at org.acme.service.BrandServiceTest_Subclass$$function$$1.apply(Unknown Source)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:73)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:62)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:136)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:107)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:61)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(Unknown Source)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
+	at org.acme.service.BrandServiceTest_Subclass.setUp(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1000)
+	at io.quarkus.test.junit.QuarkusTestExtension.interceptBeforeEachMethod(QuarkusTestExtension.java:829)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:362)
+	at org.h2.constraint.ConstraintReferential.checkRowRefTable(ConstraintReferential.java:379)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:253)
+	at org.h2.table.Table.fireConstraints(Table.java:1227)
+	at org.h2.table.Table.fireAfterRow(Table.java:1245)
+	at org.h2.command.dml.Delete.update(Delete.java:92)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:213)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:172)
+	at io.agroal.pool.wrapper.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:90)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:77)
+	... 25 more
+]]></error>
+    <system-out><![CDATA[2025-07-02 14:26:57,787 DEBUG [org.hib.SQL] (main) delete from brands b1_0
+2025-07-02 14:26:57,788 WARN  [org.hib.orm.jdb.error] (main) HHH000247: ErrorCode: 23503, SQLState: 23503
+2025-07-02 14:26:57,788 WARN  [org.hib.orm.jdb.error] (main) Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateBrand" classname="org.acme.service.BrandServiceTest" time="0.001">
+    <error message="JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: &quot;FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))&quot;; SQL statement:&#10;delete from brands b1_0 [23503-230]] [n/a]" type="org.hibernate.exception.ConstraintViolationException"><![CDATA[org.hibernate.exception.ConstraintViolationException: 
+JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]] [n/a]
+	at org.hibernate.dialect.H2Dialect.lambda$buildSQLExceptionConversionDelegate$3(H2Dialect.java:829)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.handleException(StandardJdbcMutationExecutor.java:102)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:91)
+	at org.hibernate.query.sqm.internal.SimpleDeleteQueryPlan.executeUpdate(SimpleDeleteQueryPlan.java:181)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doExecuteUpdate(QuerySqmImpl.java:543)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.executeUpdate(QuerySqmImpl.java:515)
+	at io.quarkus.hibernate.orm.panache.common.runtime.AbstractJpaOperations.deleteAll(AbstractJpaOperations.java:400)
+	at org.acme.entity.Brand.deleteAll(Brand.java)
+	at org.acme.service.BrandServiceTest.setUp(BrandServiceTest.java:29)
+	at org.acme.service.BrandServiceTest_Subclass.setUp$$superforward(Unknown Source)
+	at org.acme.service.BrandServiceTest_Subclass$$function$$1.apply(Unknown Source)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:73)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:62)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:136)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:107)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:61)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(Unknown Source)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
+	at org.acme.service.BrandServiceTest_Subclass.setUp(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1000)
+	at io.quarkus.test.junit.QuarkusTestExtension.interceptBeforeEachMethod(QuarkusTestExtension.java:829)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:362)
+	at org.h2.constraint.ConstraintReferential.checkRowRefTable(ConstraintReferential.java:379)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:253)
+	at org.h2.table.Table.fireConstraints(Table.java:1227)
+	at org.h2.table.Table.fireAfterRow(Table.java:1245)
+	at org.h2.command.dml.Delete.update(Delete.java:92)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:213)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:172)
+	at io.agroal.pool.wrapper.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:90)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:77)
+	... 25 more
+]]></error>
+    <system-out><![CDATA[2025-07-02 14:26:57,791 DEBUG [org.hib.SQL] (main) delete from brands b1_0
+2025-07-02 14:26:57,792 WARN  [org.hib.orm.jdb.error] (main) HHH000247: ErrorCode: 23503, SQLState: 23503
+2025-07-02 14:26:57,792 WARN  [org.hib.orm.jdb.error] (main) Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+]]></system-out>
+  </testcase>
+  <testcase name="testGetBrandStatistics" classname="org.acme.service.BrandServiceTest" time="0.002">
+    <error message="JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: &quot;FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))&quot;; SQL statement:&#10;delete from brands b1_0 [23503-230]] [n/a]" type="org.hibernate.exception.ConstraintViolationException"><![CDATA[org.hibernate.exception.ConstraintViolationException: 
+JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]] [n/a]
+	at org.hibernate.dialect.H2Dialect.lambda$buildSQLExceptionConversionDelegate$3(H2Dialect.java:829)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.handleException(StandardJdbcMutationExecutor.java:102)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:91)
+	at org.hibernate.query.sqm.internal.SimpleDeleteQueryPlan.executeUpdate(SimpleDeleteQueryPlan.java:181)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doExecuteUpdate(QuerySqmImpl.java:543)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.executeUpdate(QuerySqmImpl.java:515)
+	at io.quarkus.hibernate.orm.panache.common.runtime.AbstractJpaOperations.deleteAll(AbstractJpaOperations.java:400)
+	at org.acme.entity.Brand.deleteAll(Brand.java)
+	at org.acme.service.BrandServiceTest.setUp(BrandServiceTest.java:29)
+	at org.acme.service.BrandServiceTest_Subclass.setUp$$superforward(Unknown Source)
+	at org.acme.service.BrandServiceTest_Subclass$$function$$1.apply(Unknown Source)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:73)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:62)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:136)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:107)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:61)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(Unknown Source)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
+	at org.acme.service.BrandServiceTest_Subclass.setUp(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1000)
+	at io.quarkus.test.junit.QuarkusTestExtension.interceptBeforeEachMethod(QuarkusTestExtension.java:829)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:362)
+	at org.h2.constraint.ConstraintReferential.checkRowRefTable(ConstraintReferential.java:379)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:253)
+	at org.h2.table.Table.fireConstraints(Table.java:1227)
+	at org.h2.table.Table.fireAfterRow(Table.java:1245)
+	at org.h2.command.dml.Delete.update(Delete.java:92)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:213)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:172)
+	at io.agroal.pool.wrapper.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:90)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:77)
+	... 25 more
+]]></error>
+    <system-out><![CDATA[2025-07-02 14:26:57,794 DEBUG [org.hib.SQL] (main) delete from brands b1_0
+2025-07-02 14:26:57,794 WARN  [org.hib.orm.jdb.error] (main) HHH000247: ErrorCode: 23503, SQLState: 23503
+2025-07-02 14:26:57,794 WARN  [org.hib.orm.jdb.error] (main) Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+]]></system-out>
+  </testcase>
+  <testcase name="testBulkActivateBrands" classname="org.acme.service.BrandServiceTest" time="0.001">
+    <error message="JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: &quot;FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))&quot;; SQL statement:&#10;delete from brands b1_0 [23503-230]] [n/a]" type="org.hibernate.exception.ConstraintViolationException"><![CDATA[org.hibernate.exception.ConstraintViolationException: 
+JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]] [n/a]
+	at org.hibernate.dialect.H2Dialect.lambda$buildSQLExceptionConversionDelegate$3(H2Dialect.java:829)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.handleException(StandardJdbcMutationExecutor.java:102)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:91)
+	at org.hibernate.query.sqm.internal.SimpleDeleteQueryPlan.executeUpdate(SimpleDeleteQueryPlan.java:181)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doExecuteUpdate(QuerySqmImpl.java:543)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.executeUpdate(QuerySqmImpl.java:515)
+	at io.quarkus.hibernate.orm.panache.common.runtime.AbstractJpaOperations.deleteAll(AbstractJpaOperations.java:400)
+	at org.acme.entity.Brand.deleteAll(Brand.java)
+	at org.acme.service.BrandServiceTest.setUp(BrandServiceTest.java:29)
+	at org.acme.service.BrandServiceTest_Subclass.setUp$$superforward(Unknown Source)
+	at org.acme.service.BrandServiceTest_Subclass$$function$$1.apply(Unknown Source)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:73)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:62)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:136)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:107)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:61)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(Unknown Source)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
+	at org.acme.service.BrandServiceTest_Subclass.setUp(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1000)
+	at io.quarkus.test.junit.QuarkusTestExtension.interceptBeforeEachMethod(QuarkusTestExtension.java:829)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:362)
+	at org.h2.constraint.ConstraintReferential.checkRowRefTable(ConstraintReferential.java:379)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:253)
+	at org.h2.table.Table.fireConstraints(Table.java:1227)
+	at org.h2.table.Table.fireAfterRow(Table.java:1245)
+	at org.h2.command.dml.Delete.update(Delete.java:92)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:213)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:172)
+	at io.agroal.pool.wrapper.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:90)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:77)
+	... 25 more
+]]></error>
+    <system-out><![CDATA[2025-07-02 14:26:57,795 DEBUG [org.hib.SQL] (main) delete from brands b1_0
+2025-07-02 14:26:57,796 WARN  [org.hib.orm.jdb.error] (main) HHH000247: ErrorCode: 23503, SQLState: 23503
+2025-07-02 14:26:57,796 WARN  [org.hib.orm.jdb.error] (main) Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+]]></system-out>
+  </testcase>
+  <testcase name="testUpdateBrandWithDuplicateName" classname="org.acme.service.BrandServiceTest" time="0.002">
+    <error message="JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: &quot;FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))&quot;; SQL statement:&#10;delete from brands b1_0 [23503-230]] [n/a]" type="org.hibernate.exception.ConstraintViolationException"><![CDATA[org.hibernate.exception.ConstraintViolationException: 
+JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]] [n/a]
+	at org.hibernate.dialect.H2Dialect.lambda$buildSQLExceptionConversionDelegate$3(H2Dialect.java:829)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.handleException(StandardJdbcMutationExecutor.java:102)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:91)
+	at org.hibernate.query.sqm.internal.SimpleDeleteQueryPlan.executeUpdate(SimpleDeleteQueryPlan.java:181)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doExecuteUpdate(QuerySqmImpl.java:543)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.executeUpdate(QuerySqmImpl.java:515)
+	at io.quarkus.hibernate.orm.panache.common.runtime.AbstractJpaOperations.deleteAll(AbstractJpaOperations.java:400)
+	at org.acme.entity.Brand.deleteAll(Brand.java)
+	at org.acme.service.BrandServiceTest.setUp(BrandServiceTest.java:29)
+	at org.acme.service.BrandServiceTest_Subclass.setUp$$superforward(Unknown Source)
+	at org.acme.service.BrandServiceTest_Subclass$$function$$1.apply(Unknown Source)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:73)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:62)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:136)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:107)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:61)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(Unknown Source)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
+	at org.acme.service.BrandServiceTest_Subclass.setUp(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1000)
+	at io.quarkus.test.junit.QuarkusTestExtension.interceptBeforeEachMethod(QuarkusTestExtension.java:829)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:362)
+	at org.h2.constraint.ConstraintReferential.checkRowRefTable(ConstraintReferential.java:379)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:253)
+	at org.h2.table.Table.fireConstraints(Table.java:1227)
+	at org.h2.table.Table.fireAfterRow(Table.java:1245)
+	at org.h2.command.dml.Delete.update(Delete.java:92)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:213)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:172)
+	at io.agroal.pool.wrapper.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:90)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:77)
+	... 25 more
+]]></error>
+    <system-out><![CDATA[2025-07-02 14:26:57,799 DEBUG [org.hib.SQL] (main) delete from brands b1_0
+2025-07-02 14:26:57,799 WARN  [org.hib.orm.jdb.error] (main) HHH000247: ErrorCode: 23503, SQLState: 23503
+2025-07-02 14:26:57,799 WARN  [org.hib.orm.jdb.error] (main) Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+]]></system-out>
+  </testcase>
+  <testcase name="testActivateBrand" classname="org.acme.service.BrandServiceTest" time="0.001">
+    <error message="JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: &quot;FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))&quot;; SQL statement:&#10;delete from brands b1_0 [23503-230]] [n/a]" type="org.hibernate.exception.ConstraintViolationException"><![CDATA[org.hibernate.exception.ConstraintViolationException: 
+JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]] [n/a]
+	at org.hibernate.dialect.H2Dialect.lambda$buildSQLExceptionConversionDelegate$3(H2Dialect.java:829)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.handleException(StandardJdbcMutationExecutor.java:102)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:91)
+	at org.hibernate.query.sqm.internal.SimpleDeleteQueryPlan.executeUpdate(SimpleDeleteQueryPlan.java:181)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doExecuteUpdate(QuerySqmImpl.java:543)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.executeUpdate(QuerySqmImpl.java:515)
+	at io.quarkus.hibernate.orm.panache.common.runtime.AbstractJpaOperations.deleteAll(AbstractJpaOperations.java:400)
+	at org.acme.entity.Brand.deleteAll(Brand.java)
+	at org.acme.service.BrandServiceTest.setUp(BrandServiceTest.java:29)
+	at org.acme.service.BrandServiceTest_Subclass.setUp$$superforward(Unknown Source)
+	at org.acme.service.BrandServiceTest_Subclass$$function$$1.apply(Unknown Source)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:73)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:62)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:136)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:107)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:61)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(Unknown Source)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
+	at org.acme.service.BrandServiceTest_Subclass.setUp(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1000)
+	at io.quarkus.test.junit.QuarkusTestExtension.interceptBeforeEachMethod(QuarkusTestExtension.java:829)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:362)
+	at org.h2.constraint.ConstraintReferential.checkRowRefTable(ConstraintReferential.java:379)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:253)
+	at org.h2.table.Table.fireConstraints(Table.java:1227)
+	at org.h2.table.Table.fireAfterRow(Table.java:1245)
+	at org.h2.command.dml.Delete.update(Delete.java:92)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:213)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:172)
+	at io.agroal.pool.wrapper.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:90)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:77)
+	... 25 more
+]]></error>
+    <system-out><![CDATA[2025-07-02 14:26:57,801 DEBUG [org.hib.SQL] (main) delete from brands b1_0
+2025-07-02 14:26:57,802 WARN  [org.hib.orm.jdb.error] (main) HHH000247: ErrorCode: 23503, SQLState: 23503
+2025-07-02 14:26:57,802 WARN  [org.hib.orm.jdb.error] (main) Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+]]></system-out>
+  </testcase>
+  <testcase name="testSearchBrandsByName" classname="org.acme.service.BrandServiceTest" time="0.002">
+    <error message="JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: &quot;FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))&quot;; SQL statement:&#10;delete from brands b1_0 [23503-230]] [n/a]" type="org.hibernate.exception.ConstraintViolationException"><![CDATA[org.hibernate.exception.ConstraintViolationException: 
+JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]] [n/a]
+	at org.hibernate.dialect.H2Dialect.lambda$buildSQLExceptionConversionDelegate$3(H2Dialect.java:829)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.handleException(StandardJdbcMutationExecutor.java:102)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:91)
+	at org.hibernate.query.sqm.internal.SimpleDeleteQueryPlan.executeUpdate(SimpleDeleteQueryPlan.java:181)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doExecuteUpdate(QuerySqmImpl.java:543)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.executeUpdate(QuerySqmImpl.java:515)
+	at io.quarkus.hibernate.orm.panache.common.runtime.AbstractJpaOperations.deleteAll(AbstractJpaOperations.java:400)
+	at org.acme.entity.Brand.deleteAll(Brand.java)
+	at org.acme.service.BrandServiceTest.setUp(BrandServiceTest.java:29)
+	at org.acme.service.BrandServiceTest_Subclass.setUp$$superforward(Unknown Source)
+	at org.acme.service.BrandServiceTest_Subclass$$function$$1.apply(Unknown Source)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:73)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:62)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:136)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:107)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:61)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(Unknown Source)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
+	at org.acme.service.BrandServiceTest_Subclass.setUp(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1000)
+	at io.quarkus.test.junit.QuarkusTestExtension.interceptBeforeEachMethod(QuarkusTestExtension.java:829)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:362)
+	at org.h2.constraint.ConstraintReferential.checkRowRefTable(ConstraintReferential.java:379)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:253)
+	at org.h2.table.Table.fireConstraints(Table.java:1227)
+	at org.h2.table.Table.fireAfterRow(Table.java:1245)
+	at org.h2.command.dml.Delete.update(Delete.java:92)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:213)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:172)
+	at io.agroal.pool.wrapper.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:90)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:77)
+	... 25 more
+]]></error>
+    <system-out><![CDATA[2025-07-02 14:26:57,804 DEBUG [org.hib.SQL] (main) delete from brands b1_0
+2025-07-02 14:26:57,804 WARN  [org.hib.orm.jdb.error] (main) HHH000247: ErrorCode: 23503, SQLState: 23503
+2025-07-02 14:26:57,804 WARN  [org.hib.orm.jdb.error] (main) Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+]]></system-out>
+  </testcase>
+  <testcase name="testBulkDeactivateBrands" classname="org.acme.service.BrandServiceTest" time="0.002">
+    <error message="JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: &quot;FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))&quot;; SQL statement:&#10;delete from brands b1_0 [23503-230]] [n/a]" type="org.hibernate.exception.ConstraintViolationException"><![CDATA[org.hibernate.exception.ConstraintViolationException: 
+JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]] [n/a]
+	at org.hibernate.dialect.H2Dialect.lambda$buildSQLExceptionConversionDelegate$3(H2Dialect.java:829)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.handleException(StandardJdbcMutationExecutor.java:102)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:91)
+	at org.hibernate.query.sqm.internal.SimpleDeleteQueryPlan.executeUpdate(SimpleDeleteQueryPlan.java:181)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doExecuteUpdate(QuerySqmImpl.java:543)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.executeUpdate(QuerySqmImpl.java:515)
+	at io.quarkus.hibernate.orm.panache.common.runtime.AbstractJpaOperations.deleteAll(AbstractJpaOperations.java:400)
+	at org.acme.entity.Brand.deleteAll(Brand.java)
+	at org.acme.service.BrandServiceTest.setUp(BrandServiceTest.java:29)
+	at org.acme.service.BrandServiceTest_Subclass.setUp$$superforward(Unknown Source)
+	at org.acme.service.BrandServiceTest_Subclass$$function$$1.apply(Unknown Source)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:73)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:62)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:136)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:107)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:61)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(Unknown Source)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
+	at org.acme.service.BrandServiceTest_Subclass.setUp(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1000)
+	at io.quarkus.test.junit.QuarkusTestExtension.interceptBeforeEachMethod(QuarkusTestExtension.java:829)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:362)
+	at org.h2.constraint.ConstraintReferential.checkRowRefTable(ConstraintReferential.java:379)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:253)
+	at org.h2.table.Table.fireConstraints(Table.java:1227)
+	at org.h2.table.Table.fireAfterRow(Table.java:1245)
+	at org.h2.command.dml.Delete.update(Delete.java:92)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:213)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:172)
+	at io.agroal.pool.wrapper.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:90)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:77)
+	... 25 more
+]]></error>
+    <system-out><![CDATA[2025-07-02 14:26:57,806 DEBUG [org.hib.SQL] (main) delete from brands b1_0
+2025-07-02 14:26:57,806 WARN  [org.hib.orm.jdb.error] (main) HHH000247: ErrorCode: 23503, SQLState: 23503
+2025-07-02 14:26:57,806 WARN  [org.hib.orm.jdb.error] (main) Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+]]></system-out>
+  </testcase>
+  <testcase name="testFindBrandByName" classname="org.acme.service.BrandServiceTest" time="0.002">
+    <error message="JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: &quot;FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))&quot;; SQL statement:&#10;delete from brands b1_0 [23503-230]] [n/a]" type="org.hibernate.exception.ConstraintViolationException"><![CDATA[org.hibernate.exception.ConstraintViolationException: 
+JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]] [n/a]
+	at org.hibernate.dialect.H2Dialect.lambda$buildSQLExceptionConversionDelegate$3(H2Dialect.java:829)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.handleException(StandardJdbcMutationExecutor.java:102)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:91)
+	at org.hibernate.query.sqm.internal.SimpleDeleteQueryPlan.executeUpdate(SimpleDeleteQueryPlan.java:181)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doExecuteUpdate(QuerySqmImpl.java:543)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.executeUpdate(QuerySqmImpl.java:515)
+	at io.quarkus.hibernate.orm.panache.common.runtime.AbstractJpaOperations.deleteAll(AbstractJpaOperations.java:400)
+	at org.acme.entity.Brand.deleteAll(Brand.java)
+	at org.acme.service.BrandServiceTest.setUp(BrandServiceTest.java:29)
+	at org.acme.service.BrandServiceTest_Subclass.setUp$$superforward(Unknown Source)
+	at org.acme.service.BrandServiceTest_Subclass$$function$$1.apply(Unknown Source)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:73)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:62)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:136)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:107)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:61)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(Unknown Source)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
+	at org.acme.service.BrandServiceTest_Subclass.setUp(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1000)
+	at io.quarkus.test.junit.QuarkusTestExtension.interceptBeforeEachMethod(QuarkusTestExtension.java:829)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:362)
+	at org.h2.constraint.ConstraintReferential.checkRowRefTable(ConstraintReferential.java:379)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:253)
+	at org.h2.table.Table.fireConstraints(Table.java:1227)
+	at org.h2.table.Table.fireAfterRow(Table.java:1245)
+	at org.h2.command.dml.Delete.update(Delete.java:92)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:213)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:172)
+	at io.agroal.pool.wrapper.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:90)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:77)
+	... 25 more
+]]></error>
+    <system-out><![CDATA[2025-07-02 14:26:57,809 DEBUG [org.hib.SQL] (main) delete from brands b1_0
+2025-07-02 14:26:57,809 WARN  [org.hib.orm.jdb.error] (main) HHH000247: ErrorCode: 23503, SQLState: 23503
+2025-07-02 14:26:57,809 WARN  [org.hib.orm.jdb.error] (main) Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+]]></system-out>
+  </testcase>
+  <testcase name="testFindBrandByIdNotFound" classname="org.acme.service.BrandServiceTest" time="0.003">
+    <error message="JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: &quot;FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))&quot;; SQL statement:&#10;delete from brands b1_0 [23503-230]] [n/a]" type="org.hibernate.exception.ConstraintViolationException"><![CDATA[org.hibernate.exception.ConstraintViolationException: 
+JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]] [n/a]
+	at org.hibernate.dialect.H2Dialect.lambda$buildSQLExceptionConversionDelegate$3(H2Dialect.java:829)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.handleException(StandardJdbcMutationExecutor.java:102)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:91)
+	at org.hibernate.query.sqm.internal.SimpleDeleteQueryPlan.executeUpdate(SimpleDeleteQueryPlan.java:181)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doExecuteUpdate(QuerySqmImpl.java:543)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.executeUpdate(QuerySqmImpl.java:515)
+	at io.quarkus.hibernate.orm.panache.common.runtime.AbstractJpaOperations.deleteAll(AbstractJpaOperations.java:400)
+	at org.acme.entity.Brand.deleteAll(Brand.java)
+	at org.acme.service.BrandServiceTest.setUp(BrandServiceTest.java:29)
+	at org.acme.service.BrandServiceTest_Subclass.setUp$$superforward(Unknown Source)
+	at org.acme.service.BrandServiceTest_Subclass$$function$$1.apply(Unknown Source)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:73)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:62)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:136)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:107)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:61)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(Unknown Source)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
+	at org.acme.service.BrandServiceTest_Subclass.setUp(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1000)
+	at io.quarkus.test.junit.QuarkusTestExtension.interceptBeforeEachMethod(QuarkusTestExtension.java:829)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:362)
+	at org.h2.constraint.ConstraintReferential.checkRowRefTable(ConstraintReferential.java:379)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:253)
+	at org.h2.table.Table.fireConstraints(Table.java:1227)
+	at org.h2.table.Table.fireAfterRow(Table.java:1245)
+	at org.h2.command.dml.Delete.update(Delete.java:92)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:213)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:172)
+	at io.agroal.pool.wrapper.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:90)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:77)
+	... 25 more
+]]></error>
+    <system-out><![CDATA[2025-07-02 14:26:57,811 DEBUG [org.hib.SQL] (main) delete from brands b1_0
+2025-07-02 14:26:57,812 WARN  [org.hib.orm.jdb.error] (main) HHH000247: ErrorCode: 23503, SQLState: 23503
+2025-07-02 14:26:57,812 WARN  [org.hib.orm.jdb.error] (main) Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+]]></system-out>
+  </testcase>
+  <testcase name="testFindBrandById" classname="org.acme.service.BrandServiceTest" time="0.002">
+    <error message="JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: &quot;FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))&quot;; SQL statement:&#10;delete from brands b1_0 [23503-230]] [n/a]" type="org.hibernate.exception.ConstraintViolationException"><![CDATA[org.hibernate.exception.ConstraintViolationException: 
+JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]] [n/a]
+	at org.hibernate.dialect.H2Dialect.lambda$buildSQLExceptionConversionDelegate$3(H2Dialect.java:829)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.handleException(StandardJdbcMutationExecutor.java:102)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:91)
+	at org.hibernate.query.sqm.internal.SimpleDeleteQueryPlan.executeUpdate(SimpleDeleteQueryPlan.java:181)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doExecuteUpdate(QuerySqmImpl.java:543)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.executeUpdate(QuerySqmImpl.java:515)
+	at io.quarkus.hibernate.orm.panache.common.runtime.AbstractJpaOperations.deleteAll(AbstractJpaOperations.java:400)
+	at org.acme.entity.Brand.deleteAll(Brand.java)
+	at org.acme.service.BrandServiceTest.setUp(BrandServiceTest.java:29)
+	at org.acme.service.BrandServiceTest_Subclass.setUp$$superforward(Unknown Source)
+	at org.acme.service.BrandServiceTest_Subclass$$function$$1.apply(Unknown Source)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:73)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:62)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:136)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:107)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:61)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(Unknown Source)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
+	at org.acme.service.BrandServiceTest_Subclass.setUp(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1000)
+	at io.quarkus.test.junit.QuarkusTestExtension.interceptBeforeEachMethod(QuarkusTestExtension.java:829)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:362)
+	at org.h2.constraint.ConstraintReferential.checkRowRefTable(ConstraintReferential.java:379)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:253)
+	at org.h2.table.Table.fireConstraints(Table.java:1227)
+	at org.h2.table.Table.fireAfterRow(Table.java:1245)
+	at org.h2.command.dml.Delete.update(Delete.java:92)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:213)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:172)
+	at io.agroal.pool.wrapper.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:90)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:77)
+	... 25 more
+]]></error>
+    <system-out><![CDATA[2025-07-02 14:26:57,814 DEBUG [org.hib.SQL] (main) delete from brands b1_0
+2025-07-02 14:26:57,814 WARN  [org.hib.orm.jdb.error] (main) HHH000247: ErrorCode: 23503, SQLState: 23503
+2025-07-02 14:26:57,814 WARN  [org.hib.orm.jdb.error] (main) Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateBrandWithDuplicateName" classname="org.acme.service.BrandServiceTest" time="0.001">
+    <error message="JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: &quot;FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))&quot;; SQL statement:&#10;delete from brands b1_0 [23503-230]] [n/a]" type="org.hibernate.exception.ConstraintViolationException"><![CDATA[org.hibernate.exception.ConstraintViolationException: 
+JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]] [n/a]
+	at org.hibernate.dialect.H2Dialect.lambda$buildSQLExceptionConversionDelegate$3(H2Dialect.java:829)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.handleException(StandardJdbcMutationExecutor.java:102)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:91)
+	at org.hibernate.query.sqm.internal.SimpleDeleteQueryPlan.executeUpdate(SimpleDeleteQueryPlan.java:181)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doExecuteUpdate(QuerySqmImpl.java:543)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.executeUpdate(QuerySqmImpl.java:515)
+	at io.quarkus.hibernate.orm.panache.common.runtime.AbstractJpaOperations.deleteAll(AbstractJpaOperations.java:400)
+	at org.acme.entity.Brand.deleteAll(Brand.java)
+	at org.acme.service.BrandServiceTest.setUp(BrandServiceTest.java:29)
+	at org.acme.service.BrandServiceTest_Subclass.setUp$$superforward(Unknown Source)
+	at org.acme.service.BrandServiceTest_Subclass$$function$$1.apply(Unknown Source)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:73)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:62)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:136)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:107)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:61)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(Unknown Source)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
+	at org.acme.service.BrandServiceTest_Subclass.setUp(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1000)
+	at io.quarkus.test.junit.QuarkusTestExtension.interceptBeforeEachMethod(QuarkusTestExtension.java:829)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:362)
+	at org.h2.constraint.ConstraintReferential.checkRowRefTable(ConstraintReferential.java:379)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:253)
+	at org.h2.table.Table.fireConstraints(Table.java:1227)
+	at org.h2.table.Table.fireAfterRow(Table.java:1245)
+	at org.h2.command.dml.Delete.update(Delete.java:92)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:213)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:172)
+	at io.agroal.pool.wrapper.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:90)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:77)
+	... 25 more
+]]></error>
+    <system-out><![CDATA[2025-07-02 14:26:57,817 DEBUG [org.hib.SQL] (main) delete from brands b1_0
+2025-07-02 14:26:57,817 WARN  [org.hib.orm.jdb.error] (main) HHH000247: ErrorCode: 23503, SQLState: 23503
+2025-07-02 14:26:57,817 WARN  [org.hib.orm.jdb.error] (main) Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+]]></system-out>
+  </testcase>
+  <testcase name="testFindBrandByNameNotFound" classname="org.acme.service.BrandServiceTest" time="0.001">
+    <error message="JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: &quot;FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))&quot;; SQL statement:&#10;delete from brands b1_0 [23503-230]] [n/a]" type="org.hibernate.exception.ConstraintViolationException"><![CDATA[org.hibernate.exception.ConstraintViolationException: 
+JDBC exception executing SQL [delete from brands b1_0] [Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]] [n/a]
+	at org.hibernate.dialect.H2Dialect.lambda$buildSQLExceptionConversionDelegate$3(H2Dialect.java:829)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.handleException(StandardJdbcMutationExecutor.java:102)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:91)
+	at org.hibernate.query.sqm.internal.SimpleDeleteQueryPlan.executeUpdate(SimpleDeleteQueryPlan.java:181)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doExecuteUpdate(QuerySqmImpl.java:543)
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.executeUpdate(QuerySqmImpl.java:515)
+	at io.quarkus.hibernate.orm.panache.common.runtime.AbstractJpaOperations.deleteAll(AbstractJpaOperations.java:400)
+	at org.acme.entity.Brand.deleteAll(Brand.java)
+	at org.acme.service.BrandServiceTest.setUp(BrandServiceTest.java:29)
+	at org.acme.service.BrandServiceTest_Subclass.setUp$$superforward(Unknown Source)
+	at org.acme.service.BrandServiceTest_Subclass$$function$$1.apply(Unknown Source)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:73)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.proceed(AroundInvokeInvocationContext.java:62)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:136)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.invokeInOurTx(TransactionalInterceptorBase.java:107)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.doIntercept(TransactionalInterceptorRequired.java:38)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorBase.intercept(TransactionalInterceptorBase.java:61)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired.intercept(TransactionalInterceptorRequired.java:32)
+	at io.quarkus.narayana.jta.runtime.interceptor.TransactionalInterceptorRequired_Bean.intercept(Unknown Source)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
+	at org.acme.service.BrandServiceTest_Subclass.setUp(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.quarkus.test.junit.QuarkusTestExtension.runExtensionMethod(QuarkusTestExtension.java:1000)
+	at io.quarkus.test.junit.QuarkusTestExtension.interceptBeforeEachMethod(QuarkusTestExtension.java:829)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:520)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:362)
+	at org.h2.constraint.ConstraintReferential.checkRowRefTable(ConstraintReferential.java:379)
+	at org.h2.constraint.ConstraintReferential.checkRow(ConstraintReferential.java:253)
+	at org.h2.table.Table.fireConstraints(Table.java:1227)
+	at org.h2.table.Table.fireAfterRow(Table.java:1245)
+	at org.h2.command.dml.Delete.update(Delete.java:92)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:74)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:139)
+	at org.h2.command.Command.executeUpdate(Command.java:304)
+	at org.h2.command.Command.executeUpdate(Command.java:248)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdateInternal(JdbcPreparedStatement.java:213)
+	at org.h2.jdbc.JdbcPreparedStatement.executeUpdate(JdbcPreparedStatement.java:172)
+	at io.agroal.pool.wrapper.PreparedStatementWrapper.executeUpdate(PreparedStatementWrapper.java:90)
+	at org.hibernate.sql.exec.internal.StandardJdbcMutationExecutor.execute(StandardJdbcMutationExecutor.java:77)
+	... 25 more
+]]></error>
+    <system-out><![CDATA[2025-07-02 14:26:57,818 DEBUG [org.hib.SQL] (main) delete from brands b1_0
+2025-07-02 14:26:57,819 WARN  [org.hib.orm.jdb.error] (main) HHH000247: ErrorCode: 23503, SQLState: 23503
+2025-07-02 14:26:57,819 WARN  [org.hib.orm.jdb.error] (main) Referential integrity constraint violation: "FKA3A4MPSFDF4D2Y6R8RA3SC8MV: PUBLIC.PRODUCTS FOREIGN KEY(BRAND_ID) REFERENCES PUBLIC.BRANDS(ID) (CAST(7 AS BIGINT))"; SQL statement:
+delete from brands b1_0 [23503-230]
+]]></system-out>
+  </testcase>
+</testsuite>

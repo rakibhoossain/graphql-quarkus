@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce GraphQL Field Selection Demo</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="app-header">
+        <h1>🛍️ E-commerce Product Management</h1>
+        <p>GraphQL Field Selection Performance Demo</p>
+      </header>
+
+      <main class="main-content">
+        <!-- Query Type Selector -->
+        <section class="query-selector">
+          <h2>🎯 Select Query Type to See Performance Difference</h2>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="queryType" value="basic" checked />
+              <span class="radio-text">
+                <strong>Basic Fields Only</strong> (Optimized - ID, Name, SKU, Price, Stock)
+              </span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="queryType" value="withRelations" />
+              <span class="radio-text">
+                <strong>With Relations</strong> (Includes Brand & Category)
+              </span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="queryType" value="allFields" />
+              <span class="radio-text">
+                <strong>All Fields</strong> (Complete Entity with All Relations)
+              </span>
+            </label>
+          </div>
+        </section>
+
+        <!-- Performance Metrics -->
+        <section class="performance-metrics" id="performanceMetrics" style="display: none;">
+          <h3>📊 Last Query Performance</h3>
+          <div class="metrics-grid">
+            <div class="metric">
+              <span class="metric-label">Query Time:</span>
+              <span class="metric-value" id="queryTime">-</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Fields Requested:</span>
+              <span class="metric-value" id="fieldsRequested">-</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Records Returned:</span>
+              <span class="metric-value" id="recordsReturned">-</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Data Generation Section -->
+        <section class="data-generation-section">
+          <h3>🚀 Generate Test Data</h3>
+          <div class="generation-controls">
+            <button id="generate50kBtn" class="generate-btn">Generate 50,000 Products</button>
+            <button id="generateCustomBtn" class="generate-btn secondary">Custom Generation</button>
+            <div id="generationStatus" class="generation-status" style="display: none;"></div>
+          </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="search-section">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Search products..."
+            class="search-input"
+          />
+          <button id="loadProductsBtn" class="load-btn">Load Products</button>
+        </section>
+
+        <!-- Loading State -->
+        <div id="loadingState" class="loading" style="display: none;">
+          <div class="spinner"></div>
+          <span>Loading products...</span>
+        </div>
+
+        <!-- Error State -->
+        <div id="errorState" class="error" style="display: none;"></div>
+
+        <!-- Products Grid -->
+        <section class="products-section">
+          <div id="productsGrid" class="products-grid"></div>
+        </section>
+
+        <!-- Pagination -->
+        <section class="pagination" id="pagination" style="display: none;">
+          <button id="prevBtn" class="pagination-btn">← Previous</button>
+          <span id="pageInfo">Page 1</span>
+          <button id="nextBtn" class="pagination-btn">Next →</button>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

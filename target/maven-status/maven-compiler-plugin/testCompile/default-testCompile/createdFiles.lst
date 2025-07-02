@@ -1,0 +1,5 @@
+org/acme/graphql/BrandGraphQLResourceTest.class
+org/acme/EcommerceIntegrationTest.class
+org/acme/GreetingResourceTest.class
+org/acme/GreetingResourceIT.class
+org/acme/service/BrandServiceTest.class
